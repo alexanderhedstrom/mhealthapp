@@ -21,13 +21,13 @@ namespace CAPLab
                     Children = {
                         new Label {
                             HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
+                            Text = "Hello World!"
                         }
                     }
                 }
             };
 
-            MainPage = new NavigationPage(content);
+            MainPage = new greetPage();
         }
 
         protected override void OnStart()

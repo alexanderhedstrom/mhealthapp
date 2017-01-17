@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{A487697E-E7A2-4CFF-9BC2-D7A30884BFCC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/10.3.1.8/lib/mono/2.1/Xamarin.iOS.Common.targets">
+    <Files>
+      <File FileName="../../../../../../Library/Frameworks/Xamarin.iOS.framework/Versions/10.3.1.8/lib/mono/2.1/Xamarin.iOS.Common.targets" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CAPLab.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.CAPLab.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.9E860B08-A87F-4D03-BC21-75D8F0041E66" />
+</Properties>
