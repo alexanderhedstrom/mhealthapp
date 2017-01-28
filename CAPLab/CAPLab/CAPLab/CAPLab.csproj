@@ -36,10 +36,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="greetPage.xaml.cs">
       <DependentUpon>greetPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Homepage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InitialLoginPage.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />

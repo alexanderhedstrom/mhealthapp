@@ -9,10 +9,11 @@ namespace CAPLab
 {
     public class App : Application
     {
+        public static bool loggedIn = true;
         public App()
         {
             // The root page of your application
-            var content = new ContentPage
+            /*var content = new ContentPage
             {
                 Title = "CAPLab",
                 Content = new StackLayout
@@ -25,9 +26,15 @@ namespace CAPLab
                         }
                     }
                 }
-            };
+            };*/
 
-            MainPage = new greetPage();
+            if (loggedIn)
+            {
+                MainPage = new NavigationPage(new InitialLoginPage());
+            }else
+            {
+                MainPage = new NavigationPage(new Homepage());
+            }
         }
 
         protected override void OnStart()
