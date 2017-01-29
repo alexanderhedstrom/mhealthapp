@@ -144,7 +144,6 @@ C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debu
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\res\drawable\osuicon.png
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\CAPLab.Droid.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\bin\Debug\CAPLab.Droid.dll
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\bin\Debug\CAPLab.Droid.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\bin\Debug\CAPLab.Droid.apk
@@ -219,4 +218,5 @@ C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\obj
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\android\assets\Xamarin.Forms.Platform.Android.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\android\assets\Xamarin.Forms.Xaml.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\CAPLab.Droid.dll.mdb
-C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab.Droid\bin\Debug\CAPLab.Droid.dll.mdb
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\obj\Debug\CAPLab.Droid.dll.mdb
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.Droid\bin\Debug\CAPLab.Droid.dll.mdb

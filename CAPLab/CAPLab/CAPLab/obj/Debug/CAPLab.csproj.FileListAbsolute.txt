@@ -28,8 +28,6 @@ C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPL
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.greetPage.xaml.g.cs
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll
 C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.pdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Core.dll
@@ -46,3 +44,5 @@ C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb

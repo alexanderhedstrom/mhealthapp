@@ -5,16 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+//This page is to contain the initial logic for validating a users login. 
+
 namespace CAPLab
 {
     class InitialLoginPage : ContentPage
     {
-
         Entry participantID, participantPass;
         Label loginStatusMessage;
 
         public InitialLoginPage()
         {
+            NavigationPage.SetHasBackButton(this, false);
             this.loginStatusMessage = new Label { Text = string.Empty };
             var title = new Label
             {
@@ -69,7 +71,7 @@ namespace CAPLab
             {
                 App.loggedIn = true;
                 //The line below creates a homepage behind the current one.
-                Navigation.InsertPageBefore(new Homepage(), this);
+                Navigation.InsertPageBefore(new HomepageNav(), this);
                 //The line below removes the current page to reveal the newly created homepage.
                 Navigation.PopAsync();
             }
