@@ -9,25 +9,19 @@ namespace CAPLab
 {
     public class App : Application
     {
+        public static bool loggedIn = false;
+        //need to write a way for the loggedIn bool to be able to read the login status from local storage
         public App()
         {
-            // The root page of your application
-            var content = new ContentPage
-            {
-                Title = "CAPLab",
-                Content = new StackLayout
-                {
-                    VerticalOptions = LayoutOptions.Center,
-                    Children = {
-                        new Label {
-                            HorizontalTextAlignment = TextAlignment.Center,
-                            Text = "Hello World!"
-                        }
-                    }
-                }
-            };
 
-            MainPage = new greetPage();
+            if (loggedIn)
+            {
+                MainPage = new NavigationPage(new HomepageNav());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new InitialLoginPage());
+            }
         }
 
         protected override void OnStart()
