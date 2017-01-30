@@ -14,20 +14,6 @@ C:\Users\Linux-Fox\Desktop\VS Projects\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS Projects\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.greetPage.xaml.g.cs
 C:\Users\Linux-Fox\Desktop\VS Projects\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS Projects\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.pdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Core.dll
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Platform.dll
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Core.pdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Core.xml
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Platform.pdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Xaml.pdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.csprojResolveAssemblyReference.cache
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.greetPage.xaml.g.cs
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\Xamarin.Forms.Core.dll
@@ -44,5 +30,3 @@ C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.pdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
 C:\Users\Linux-Fox\Desktop\VS_Projects\mhealthapp\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\obj\Debug\CAPLab.dll.mdb
-C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab\bin\Debug\CAPLab.dll.mdb
