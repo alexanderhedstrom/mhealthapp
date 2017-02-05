@@ -40,7 +40,7 @@ namespace CAPLab
             };
 
             loginButton.Clicked += OnLoginButtonClicked;
-            
+
             Content = new StackLayout
             {
                 Padding = 30,
@@ -54,8 +54,6 @@ namespace CAPLab
                     loginStatusMessage
                 }
             };
-
-
         }
 
         void OnLoginButtonClicked(object sender, EventArgs e)
@@ -83,7 +81,17 @@ namespace CAPLab
 
         }
 
-        bool areCredentialsCorrect (User user)
+        protected override bool OnBackButtonPressed()
+        {
+            //the closers below use the dependency service to ensure that the application exits regardless of platform. 
+            //Info in dependency service: https://developer.xamarin.com/guides/xamarin-forms/dependency-service/introduction/
+            var closer = DependencyService.Get<ICloseApplication>();
+            closer.CloseApp();
+
+            return true;
+        }
+
+        bool areCredentialsCorrect(User user)
         {
             return user.ParticipantID == Constants.ParticipantID && user.Password == Constants.Password;
             /*This is where the call out to the server will go.
