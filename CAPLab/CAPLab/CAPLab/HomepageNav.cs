@@ -31,14 +31,14 @@ namespace CAPLab
                 Title = "Homepage"
             });
 
-            Children.Add(new ExerciseStats
-            {
-                Title = "Exercise"
-            });
-
             Children.Add(new EatingStats
             {
                 Title = "Eating"
+            });
+
+            Children.Add(new ExerciseStats
+            {
+                Title = "Exercise"
             });
 
             Children.Add(new SurveyPage

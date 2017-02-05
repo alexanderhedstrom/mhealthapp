@@ -12,7 +12,17 @@ namespace CAPLab
     {
         public greetPage()
         {
-            InitializeComponent();
+            var layout = new StackLayout();
+            var helloWorldButton = new Button
+            {
+                Text = "Click me!"
+            };
+
+            helloWorldButton.Clicked += Handle_Clicked;
+
+            layout.Children.Add(helloWorldButton);
+
+            Content = layout;
         }
 
         void Handle_Clicked(object sender, System.EventArgs e)
