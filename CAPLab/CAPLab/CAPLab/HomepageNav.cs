@@ -26,25 +26,13 @@ namespace CAPLab
 
             Title = "OSU CAPLab";
 
-            Children.Add(new HomepageStats
-            {
-                Title = "Homepage"
-            });
+            Children.Add(new HomepageStats());
 
-            Children.Add(new ExerciseStats
-            {
-                Title = "Exercise"
-            });
+            Children.Add(new EatingStats());
 
-            Children.Add(new EatingStats
-            {
-                Title = "Eating"
-            });
+            Children.Add(new ExerciseStats());
 
-            Children.Add(new SurveyPage
-            {
-                Title = "Survey"
-            });
+            Children.Add(new SurveyPage());
         }
 
 
