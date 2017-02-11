@@ -21,6 +21,7 @@ namespace CAPLab
         public Settings()
         {
             Title = "Settings";
+            Icon = "settings.png";
             //declaring TextCell links to other pages
             initialSetupLink = new TextCell { Text = "Initial setup base page", Detail = "Launches the first-time setup page", };
             dietGoalsLink = new TextCell { Text = "Diet goals page", Detail = "Launches the diet goals setup page" };

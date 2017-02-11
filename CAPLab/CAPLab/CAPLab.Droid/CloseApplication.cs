@@ -11,6 +11,9 @@ using Android.Views;
 using Android.Widget;
 
 [assembly: Xamarin.Forms.Dependency(typeof(CAPLab.Droid.CloseApplication))]
+/*
+* This class makes ues of the dependency service.More info here: https://developer.xamarin.com/guides/xamarin-forms/dependency-service/introduction/
+ */
 
 namespace CAPLab.Droid
 {
