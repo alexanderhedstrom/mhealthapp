@@ -5,6 +5,8 @@ using System.Text;
 
 using Xamarin.Forms;
 
+//Application wireframe located at: http://jtyk30.axshare.com/#p=initial_setup
+
 namespace CAPLab
 {
     public class App : Application
