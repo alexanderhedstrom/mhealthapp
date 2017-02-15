@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F2109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="X5k-f2-b5h">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,15 +16,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" image="Icon-60.png" translatesAutoresizingMaskIntoConstraints="NO" id="23">
-                                <rect key="frame" x="270" y="270" width="60" height="60"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="itunesArtwork-1024x1024.png" translatesAutoresizingMaskIntoConstraints="NO" id="51">
+                                <rect key="frame" x="0.0" y="28" width="600" height="572"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <rect key="frame" x="0.0" y="28" width="400" height="772"/>
+                                    <mask key="constraints">
+                                        <include reference="61"/>
+                                        <include reference="62"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="61" firstAttribute="width" constant="400"/>
+                                    <constraint id="62" firstAttribute="height" constant="772"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="61"/>
+                                        <exclude reference="62"/>
+                                    </mask>
+                                </variation>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="osuLoginIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="52">
+                                <rect key="frame" x="250" y="54" width="88" height="84"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="156" y="226" width="88" height="84"/>
+                                    <mask key="constraints">
+                                        <include reference="67"/>
+                                        <include reference="68"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="67" firstAttribute="width" constant="88"/>
+                                    <constraint id="68" firstAttribute="height" constant="84"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="67"/>
+                                        <exclude reference="68"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OSU CAPLab" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="56" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="179" y="334" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="54" y="304" width="312" height="76"/>
+                                    <mask key="constraints">
+                                        <include reference="75"/>
+                                        <include reference="76"/>
+                                    </mask>
+                                </variation>
+                                <constraints>
+                                    <constraint id="75" firstAttribute="width" constant="312"/>
+                                    <constraint id="76" firstAttribute="height" constant="76"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="75"/>
+                                        <exclude reference="76"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.20392156862745098" green="0.59607843137254901" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="56"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="59"/>
+                                <exclude reference="60"/>
+                                <exclude reference="69"/>
+                                <exclude reference="70"/>
+                                <exclude reference="73"/>
+                                <exclude reference="74"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="56"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="59"/>
+                                <include reference="60"/>
+                                <include reference="69"/>
+                                <include reference="70"/>
+                                <include reference="73"/>
+                                <include reference="74"/>
+                            </mask>
+                        </variation>
                         <constraints>
-                            <constraint firstItem="23" firstAttribute="centerY" secondItem="yd7-JS-zBw" secondAttribute="centerY" priority="1" id="39"/>
-                            <constraint firstItem="23" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" priority="1" id="41"/>
+                            <constraint id="59" firstItem="yd7-JS-zBw" firstAttribute="centerX" secondItem="51" secondAttribute="centerX"/>
+                            <constraint id="60" firstItem="yd7-JS-zBw" firstAttribute="bottom" secondItem="51" secondAttribute="bottom"/>
+                            <constraint id="69" firstItem="yd7-JS-zBw" firstAttribute="trailing" secondItem="52" secondAttribute="centerX" constant="156"/>
+                            <constraint id="70" firstItem="52" firstAttribute="top" secondItem="yd7-JS-zBw" secondAttribute="top" constant="226"/>
+                            <constraint id="73" firstItem="yd7-JS-zBw" firstAttribute="trailing" secondItem="56" secondAttribute="centerX" constant="34"/>
+                            <constraint id="74" firstItem="56" firstAttribute="centerX" secondItem="yd7-JS-zBw" secondAttribute="centerX" constant="304"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -34,6 +123,22 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Icon-60.png" width="180" height="180"/>
+        <image name="itunesArtwork-1024x1024.png" width="1024" height="1024"/>
+        <image name="osuLoginIcon.png" width="80" height="80"/>
+        <image name="Default-568h.png" width="320" height="568"/>
+        <image name="Default-Portrait.png" width="768" height="1004"/>
+        <image name="Default.png" width="320" height="480"/>
+        <image name="Icon-60.png" width="60" height="60"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="eating.png" width="35" height="35"/>
+        <image name="exercise.png" width="35" height="35"/>
+        <image name="homeIcon.png" width="35" height="35"/>
+        <image name="settings.png" width="35" height="35"/>
+        <image name="survey.png" width="35" height="35"/>
+        <image name="iPhoneLaunchScreen-320x480.png" width="320" height="480"/>
+        <image name="Icon.png" width="57" height="57"/>
     </resources>
+    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -16,6 +16,7 @@ namespace CAPLab
         public App()
         {
 
+
             if (loggedIn)
             {
                 MainPage = new NavigationPage(new HomepageNav());

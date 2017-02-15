@@ -25,6 +25,7 @@ namespace CAPLab
                 }));
 
             Title = "OSU CAPLab";
+            
 
             Children.Add(new HomepageStats());
 

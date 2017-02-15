@@ -1,3 +1,0 @@
-/Users/Fox/Desktop/GitHub/mhealthapp/CAPLab/CAPLab/CAPLab.Droid/obj/Debug/MonoAndroid,Version=v6.0.AssemblyAttribute.cs
-/Users/Fox/Desktop/GitHub/mhealthapp/CAPLab/CAPLab/CAPLab.Droid/obj/Debug/CAPLab.Droid.dll
-/Users/Fox/Desktop/GitHub/mhealthapp/CAPLab/CAPLab/CAPLab.Droid/obj/Debug/CAPLab.Droid.pdb
