@@ -39,6 +39,9 @@ namespace CAPLab
                 Text = "Login"
             };
 
+            var logo = new Image { WidthRequest = 80, HeightRequest = 80 };
+            logo.Source = ImageSource.FromFile("osuLoginIcon.png");
+
             loginButton.Clicked += OnLoginButtonClicked;
 
             Content = new StackLayout
@@ -48,6 +51,7 @@ namespace CAPLab
                 Children =
                 {
                     title,
+                    logo,
                     participantID,
                     participantPass,
                     loginButton,
@@ -60,7 +64,7 @@ namespace CAPLab
         {
             var user = new User
             {
-                ParticipantID = participantID.Text,
+                ParticipantID = participantID.Text.ToLower(),
                 Password = participantPass.Text
             };
 
