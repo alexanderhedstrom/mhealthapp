@@ -38,5 +38,9 @@
 	<string></string>
 	<key>UIPrerenderedIcon</key>
 	<false/>
+	<key>CFBundleName</key>
+	<string>CAPLab</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
 </dict>
 </plist>
