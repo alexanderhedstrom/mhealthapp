@@ -10,44 +10,52 @@ namespace CAPLab
 {
     public class InitialSetupPage : ContentPage
     {
-        public InitialSetupPage()
+        Button dietGoalsButton;
+        Button exerciseGoalsButton;
+        Button doneButton;
+
+        public InitialSetupPage() // public InitialSetupPage(User user)
         {
-            Label userLabel = new Label { Text =  "Your participant ID is: "+Constants.ParticipantID};
+            Label userLabel = new Label { Text =  "Your participant ID is: "+Constants.ParticipantID}; //user.ParticipantID
             Label instructionText1 = new Label { Text = "Connect your accounts by selecting each one below: "};
             Label instructionText2 = new Label { Text = "Set your goals!" };
             var fitBitButton = new Button
             {
                 Text = "FitBit",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Gray
             };
 
             var myFitnessPalButton = new Button
             {
                 Text = "MyFitnessPal",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Gray
             };
 
             var otherAppButton = new Button
             {
                 Text = "Other",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Gray
             };
 
-            var dietGoalsButton = new Button
+            dietGoalsButton = new Button
             {
                 Text = "Diet Goals",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Gray
             };
-            var exerciseGoalsButton = new Button
+            exerciseGoalsButton = new Button
             {
                 Text = "Exercise Goals",
-                BackgroundColor = Color.Red
+                BackgroundColor = Color.Gray
             };
-            var doneButton = new Button
+            doneButton = new Button
             {
                 Text = "Done?",
                 BackgroundColor = Color.Red
             };
+
+            dietGoalsButton.Clicked += dietGoalsButtonClicked;
+            exerciseGoalsButton.Clicked += exerciseGoalsButtonClicked;
+            doneButton.Clicked += doneButtonClicked;
 
             Content = new StackLayout
             {
@@ -63,6 +71,23 @@ namespace CAPLab
                     doneButton
                 }
             };
+        }
+
+        // launches diet goals page
+        void dietGoalsButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new DietGoalsPage());
+        }
+        //launches exercise goals page
+        void exerciseGoalsButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ExerciseGoalsPage());
+        }
+
+        //returns to the previous page
+        void doneButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

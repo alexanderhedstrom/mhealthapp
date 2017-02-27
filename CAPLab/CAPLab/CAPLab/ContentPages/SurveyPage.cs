@@ -11,6 +11,12 @@ namespace CAPLab
 {
     class SurveyPage : ContentPage
     {
+        public string surveyLink = "https://osu.az1.qualtrics.com/SE/?SID=SV_eX5ppb0p9OkpjlH";
+        public string surveyLinkButton1Text = "Exercise survey";
+        public string surveyLinkButton2Text = "Eating survey";
+        public string surveyLinkButton3Text = "Attitudes survey";
+        public string surveyLinkButton4Text = "Other survey";
+
         public SurveyPage()
         {
             Icon = "survey.png";
@@ -19,23 +25,26 @@ namespace CAPLab
             //More buttons will need to be created or a single button that has the link behind it change based on other factors
             var surveyLinkButton1 = new Button
             {
-                Text = "Survey 1",
-                BackgroundColor = Color.Red
+                Text = surveyLinkButton1Text,
+                BackgroundColor = Color.Gray
             };
 
             var surveyLinkButton2 = new Button
             {
-                Text = "Survey 2"
+                Text = surveyLinkButton2Text,
+                BackgroundColor = Color.Gray
             };
 
             var surveyLinkButton3 = new Button
             {
-                Text = "Survey 3"
+                Text = surveyLinkButton3Text,
+                BackgroundColor = Color.Gray
             };
 
             var surveyLinkButton4 = new Button
             {
-                Text = "Survey 4"
+                Text = surveyLinkButton4Text,
+                BackgroundColor = Color.Gray
             };
 
             var placeholderText = new Label
@@ -59,10 +68,10 @@ namespace CAPLab
 
         void SurveyLaunch(Object sender, EventArgs e)
         {
-            //Insert code here that determines what should happen when the survey 1 button is pressed. 
-
-            //I will likely implement webview in this method
-            //https://developer.xamarin.com/guides/xamarin-forms/user-interface/webview/ 
+            //changinf where the button points to is as simple as updating the public surveyLink variable via another method
+            //currrently all buttons point to this URL. This method will need to be duplicated if there will be several surveys simultaneously.
+            Device.OpenUri(new Uri (surveyLink));
+            //link to test survey; https://osu.az1.qualtrics.com/SE/?SID=SV_eX5ppb0p9OkpjlH
         }
     }
 }

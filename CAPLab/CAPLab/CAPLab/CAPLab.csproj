@@ -42,6 +42,7 @@
     <Compile Include="ContentPages\ExerciseGoalsPage.cs" />
     <Compile Include="ContentPages\ExerciseStats.cs" />
     <Compile Include="ContentPages\InitialSetupPage.cs" />
+    <Compile Include="ContentPages\LicensePage.cs" />
     <Compile Include="ICloseApplication.cs" />
     <Compile Include="MISC\greetPage.xaml.cs">
       <DependentUpon>greetPage.xaml</DependentUpon>

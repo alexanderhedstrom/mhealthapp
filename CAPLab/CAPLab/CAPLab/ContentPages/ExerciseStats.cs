@@ -23,7 +23,7 @@ namespace CAPLab
             Label box1Label = new Label {Text = "Exercise Graph 1" };
             BoxView box1 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
 
             Label box2Label = new Label { Text = "Exercise Graph 2" };
@@ -34,7 +34,7 @@ namespace CAPLab
             Label box3Label = new Label { Text = "Exercise Graph 3" };
             BoxView box3 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
 
             Content = new StackLayout

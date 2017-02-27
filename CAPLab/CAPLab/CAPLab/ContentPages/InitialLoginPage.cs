@@ -18,20 +18,23 @@ namespace CAPLab
         {
             NavigationPage.SetHasBackButton(this, false);
             this.loginStatusMessage = new Label { Text = string.Empty };
+            Icon = "logoutIcon.png";
             var title = new Label
             {
                 Text = "OSU CAPLab",
                 HorizontalTextAlignment = TextAlignment.Center,
-                Font = Font.BoldSystemFontOfSize(NamedSize.Large)
+                FontAttributes = FontAttributes.Bold
             };
             participantID = new Entry
             {
                 Placeholder = "Enter your participant ID here",
+                Keyboard = Keyboard.Plain
             };
 
             participantPass = new Entry
             {
-                Placeholder = "Enter your password here"
+                Placeholder = "Enter your password here",
+                IsPassword = true
             };
 
             var loginButton = new Button
@@ -65,7 +68,7 @@ namespace CAPLab
             var user = new User
             {
                 ParticipantID = participantID.Text.ToLower(),
-                Password = participantPass.Text
+                Password = participantPass.Text,
             };
 
             var userIsValid = areCredentialsCorrect(user);

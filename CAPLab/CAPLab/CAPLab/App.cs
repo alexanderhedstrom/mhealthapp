@@ -12,18 +12,44 @@ namespace CAPLab
     public class App : Application
     {
         public static bool loggedIn = false;
+        //public static User user;
+
         //need to write a way for the loggedIn bool to be able to read the login status from local storage
         public App()
         {
+            //write code here to check local storage to verify if local data exists for the user on the device. 
+
+
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////
+
+            //if no data is found then create a new user instance, create local data for user, pass new user object to the next class/page 
+
+
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+            // if data is found then change App.loggedin to true then set variables from local data to user attributes then pass user object to the next class/page 
+
+
+
+            //////////////////////////////////////////////////////////////////////////////////////////////////
 
 
             if (loggedIn)
             {
-                MainPage = new NavigationPage(new HomepageNav());
+                MainPage = new NavigationPage(new HomepageNav())
+                {
+                    BarBackgroundColor = Color.Red
+                };
             }
             else
             {
-                MainPage = new NavigationPage(new InitialLoginPage());
+                MainPage = new NavigationPage(new InitialLoginPage())
+                {
+                    BarBackgroundColor = Color.Red
+                };
             }
         }
 

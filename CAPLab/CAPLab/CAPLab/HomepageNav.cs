@@ -16,16 +16,16 @@ namespace CAPLab
     {
         public HomepageNav()
         {
-
             //Moves settings page to a button on the toolbar. 
             // the second argument should be the name of an icon image file (PNG)
             ToolbarItems.Add( new ToolbarItem ("Settings", "settings", () =>
                 {
-                    Navigation.PushAsync(new Settings());
+                    Navigation.PushAsync(new Settings()); //Navigation.PushAsync(new Settings(App.user));
                 }));
 
             Title = "OSU CAPLab";
-            
+
+            BarBackgroundColor = Color.Red;
 
             Children.Add(new HomepageStats());
 

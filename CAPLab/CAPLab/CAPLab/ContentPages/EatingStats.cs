@@ -23,7 +23,7 @@ namespace CAPLab
             Label box1Label = new Label { Text = "Eating graph 1" };
             BoxView box1 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
             Label box2Label = new Label { Text = "Eating graph 2" };
             BoxView box2 = new BoxView
@@ -33,7 +33,7 @@ namespace CAPLab
             Label box3Label = new Label { Text = "Eating graph 3" };
             BoxView box3 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
 
             Content = new StackLayout
