@@ -10,15 +10,17 @@ namespace CAPLab
 {
     public class DietGoalsPage : ContentPage
     {
+        Button doneButton;
+
         public DietGoalsPage()
         {
-
+            Title = "Diet Goals Setup Page";
             var currentWeight = new EntryCell { Label = "Current Weight:" };
             var goalWeight = new EntryCell { Label = "Goal Weight:" };
             var weeklyWeightLoss = new EntryCell { Label = "Weekly weight loss:" };
 
 
-            var doneButton = new Button
+            doneButton = new Button
             {
                 Text = "Done?",
                 BackgroundColor = Color.Red
@@ -42,15 +44,24 @@ namespace CAPLab
 
             };
 
+            doneButton.Clicked += doneButtonClicked; 
+
             Content = new StackLayout
             {
                 Children = {
+                    new Label { Text = "Enter your diet goals below:" },
                     table,
                     committmentLabel,
                     committmentLevel,
                     doneButton
                 }
             };
+        }
+
+        //returns to the previous page
+        void doneButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }

@@ -17,42 +17,47 @@ namespace CAPLab
         TextCell initialSetupLink;
         TextCell dietGoalsLink;
         TextCell exerciseGoalsLink;
+        TextCell licenseLink;
 
-        public Settings()
+        public Settings() //public Settings(User user)
         {
             Title = "Settings";
             Icon = "settings.png";
+
             //declaring TextCell links to other pages
-            initialSetupLink = new TextCell { Text = "Initial setup base page", Detail = "Launches the first-time setup page", };
-            dietGoalsLink = new TextCell { Text = "Diet goals page", Detail = "Launches the diet goals setup page" };
-            exerciseGoalsLink = new TextCell { Text = "Exercise goals page", Detail = "Launches the exercise goals etup page" };
+            initialSetupLink = new TextCell { Text = "Initial setup base page", Detail = "Launches the first-time setup page", TextColor = Color.Black};
+            dietGoalsLink = new TextCell { Text = "Diet goals page", Detail = "Launches the diet goals setup page", TextColor = Color.Black };
+            exerciseGoalsLink = new TextCell { Text = "Exercise goals page", Detail = "Launches the exercise goals etup page", TextColor = Color.Black };
+            licenseLink = new TextCell { Text = "Our license", TextColor = Color.Black };
+
+            //declaring table sections
 
             //declaring the primary content of the page
             Content = new TableView
             {
                 Root = new TableRoot
                 {
-                    new TableSection ("Test section 1")
+                    new TableSection (" ")
                     {
                         new SwitchCell {Text = "Test 1" },
                         new SwitchCell {Text = "Test 2" },
                         new EntryCell {Label = "Test 3", Text = "1234" }
                     },
-                    new TableSection ("Test section 2")
+                    new TableSection (" ")
                     {
                         new SwitchCell {Text = "Test 1" },
                         new SwitchCell {Text = "Test 2" },
                         new EntryCell {Label = "Test 3", Text = "1234" }
                     },
-                    new TableSection ("Initial setup pages")
+                    new TableSection (" ")
                     {
                         initialSetupLink,
                         dietGoalsLink,
                         exerciseGoalsLink
                     },
-                    new TableSection ("Licensing")
+                    new TableSection (" ")
                     {
-                        new TextCell {Text = "Our license" }
+                        licenseLink
                     }
                 },
                 Intent = TableIntent.Settings
@@ -61,10 +66,12 @@ namespace CAPLab
             initialSetupLink.Tapped += initialSetupLinkClicked;
             dietGoalsLink.Tapped += dietGoalsLinkClicked;
             exerciseGoalsLink.Tapped += exerciseGoalsLinkClicked;
+            licenseLink.Tapped += licenseLinkClicked;
 
-            ToolbarItems.Add(new ToolbarItem("Logout", "logout", () =>
+            ToolbarItems.Add(new ToolbarItem("Logout", "logoutIcon.png", () =>
             {
                 App.loggedIn = false;
+                Icon = "logoutIcon.png";
                 Navigation.PushAsync(new InitialLoginPage());
             }));
         }
@@ -72,7 +79,7 @@ namespace CAPLab
         //launches initial setup page
         void initialSetupLinkClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InitialSetupPage());
+            Navigation.PushAsync(new InitialSetupPage()); //Navigation.PushAsync(new InitialSetupPage(App.user))
         }
         // launches diet goals page
         void dietGoalsLinkClicked(object sender, EventArgs e)
@@ -83,6 +90,12 @@ namespace CAPLab
         void exerciseGoalsLinkClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new ExerciseGoalsPage());
+        }
+
+        //launches the license page
+        void licenseLinkClicked (object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new LicensePage());
         }
     }
 }

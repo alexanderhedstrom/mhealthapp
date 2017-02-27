@@ -23,7 +23,7 @@ namespace CAPLab
             Label box1Label = new Label { Text = "Your steps here:" };
             BoxView box1 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
             Label box2Label = new Label { Text = "Your Exercise goal progress here:" };
             BoxView box2 = new BoxView
@@ -33,7 +33,7 @@ namespace CAPLab
             Label box3Label = new Label { Text = "Your Diet goal progress here:" };
             BoxView box3 = new BoxView
             {
-                Color = Color.Red
+                Color = Color.Gray
             };
             Content = new StackLayout
             {

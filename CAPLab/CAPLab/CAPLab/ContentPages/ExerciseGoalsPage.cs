@@ -10,23 +10,38 @@ namespace CAPLab
 {
     public class ExerciseGoalsPage : ContentPage
     {
+        Button doneButton;
+
         public ExerciseGoalsPage()
         {
-            Label box2Label = new Label { Text = "Your Exercise goal process here:" };
+            Label box2Label = new Label { Text = "Your Exercise goal progress here:" };
 
-            List<SwitchCell> choices = new List<SwitchCell>
-            {
-                new SwitchCell { Text = "Lose weight" },
-                new SwitchCell { Text = "Gain Muscle definition" },
-                new SwitchCell { Text = "Become stronger" },
-                new SwitchCell { Text = "Become healthier" },
-                new SwitchCell { Text = "Train for an event/sport" },
-                new SwitchCell { Text = "Other" }
-            };
+            doneButton = new Button {Text = "Done?", BackgroundColor = Color.Red };
+            doneButton.Clicked += doneButtonClicked;
 
-            ListView exerciseGoalsList = new ListView
+            //Declaring exercise goals variables below
+            var choice1 = new SwitchCell { Text = "Lose weight" };
+            var choice2 = new SwitchCell { Text = "Gain Muscle definition" };
+            var choice3 = new SwitchCell { Text = "Become stronger" };
+            var choice4 = new SwitchCell { Text = "Become healthier" };
+            var choice5 = new SwitchCell { Text = "Train for an event/sport" };
+            var choice6 = new SwitchCell { Text = "Other" };
+
+            //Declaring table to hold goals variables below
+            var goalsTable = new TableView
             {
-                ItemsSource = choices,
+                Root = new TableRoot
+                {
+                    new TableSection (" ")
+                    {
+                        choice1,
+                        choice2,
+                        choice3,
+                        choice4,
+                        choice5,
+                        choice6
+                    }
+                }
             };
 
             Title = "Exercise goals setup page";
@@ -35,9 +50,16 @@ namespace CAPLab
             {
                 Children = {
                     new Label { Text = "Check all that apply" },
-                    exerciseGoalsList
+                    goalsTable,
+                    doneButton
                 }
             };
+        }
+
+        //returns to the previous page
+        void doneButtonClicked(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
         }
     }
 }
