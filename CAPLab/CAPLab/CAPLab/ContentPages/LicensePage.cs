@@ -5,6 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+/*
+* File name: LicensePage.cs
+* 
+* @description This class exists to store and display the EULA of the primary app. 
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 namespace CAPLab
 {
     class LicensePage : ContentPage

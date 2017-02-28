@@ -5,7 +5,18 @@ using System.Text;
 
 using Xamarin.Forms;
 
-//Application wireframe located at: http://jtyk30.axshare.com/#p=initial_setup
+/*
+* File name: App.cs
+* 
+* @description This is the primary class around which the application is built and launched. 
+*              This class serves as the entry point or beginning of the application. 
+*              Application wireframe located at: http://jtyk30.axshare.com/#p=initial_setup
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
 
 namespace CAPLab
 {

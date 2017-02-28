@@ -6,6 +6,18 @@ using System.Text;
 
 using Xamarin.Forms;
 
+/*
+* File name: ExerciseGoalsPage.cs
+* 
+* @description This class exists to render and control the logic of the exercise goals page of the primary app. 
+*              This page is to contain the exercise goals selection options. 
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 namespace CAPLab
 {
     public class ExerciseGoalsPage : ContentPage

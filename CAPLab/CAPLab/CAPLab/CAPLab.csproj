@@ -37,6 +37,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Classes\Constants.cs" />
+    <Compile Include="Classes\LocalStorageAccessor.cs" />
     <Compile Include="ContentPages\DietGoalsPage.cs" />
     <Compile Include="ContentPages\EatingStats.cs" />
     <Compile Include="ContentPages\ExerciseGoalsPage.cs" />
@@ -44,6 +45,7 @@
     <Compile Include="ContentPages\InitialSetupPage.cs" />
     <Compile Include="ContentPages\LicensePage.cs" />
     <Compile Include="ICloseApplication.cs" />
+    <Compile Include="ILocalStorageAccessor.cs" />
     <Compile Include="MISC\greetPage.xaml.cs">
       <DependentUpon>greetPage.xaml</DependentUpon>
     </Compile>

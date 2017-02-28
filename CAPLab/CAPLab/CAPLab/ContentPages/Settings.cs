@@ -5,10 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-//This page is to contain the various settings in the app that the user can configure. 
+/*
+* File name: Settings.cs
+* 
+* @description This class exists to store and display the settings of the primary app. 
+*              This page is to contain the various settings in the app that the user can configure. 
+*              Notes on implementation at the link: https://developer.xamarin.com/guides/xamarin-forms/user-interface/tableview/
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
 
-//Notes on implementation at the link below. 
-//https://developer.xamarin.com/guides/xamarin-forms/user-interface/tableview/
+//
+//
 
 namespace CAPLab
 {
