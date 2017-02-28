@@ -6,6 +6,17 @@ using System.Text;
 
 using Xamarin.Forms;
 
+/*
+* File name: DietGoalsPage.cs
+* 
+* @description This class exists to render and control the logic of the DietGoalsPage. 
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 namespace CAPLab
 {
     public class DietGoalsPage : ContentPage
@@ -15,9 +26,9 @@ namespace CAPLab
         public DietGoalsPage()
         {
             Title = "Diet Goals Setup Page";
-            var currentWeight = new EntryCell { Label = "Current Weight:" };
-            var goalWeight = new EntryCell { Label = "Goal Weight:" };
-            var weeklyWeightLoss = new EntryCell { Label = "Weekly weight loss:" };
+            var currentWeight = new EntryCell { Label = "Current Weight:", Keyboard = Keyboard.Numeric };
+            var goalWeight = new EntryCell { Label = "Goal Weight:", Keyboard = Keyboard.Numeric };
+            var weeklyWeightLoss = new EntryCell { Label = "Weekly weight loss:", Keyboard = Keyboard.Numeric };
 
 
             doneButton = new Button

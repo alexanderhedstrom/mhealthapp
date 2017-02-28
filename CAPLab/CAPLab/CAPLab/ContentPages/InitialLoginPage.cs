@@ -5,7 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-//This page is to contain the initial logic for validating a users login. 
+/*
+* File name: InitialLoginPage.cs
+* 
+* @description This class exists to render and control the logic of the initial login page of the primary app. 
+*              This page is to contain the initial logic for validating a users login. 
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 
 namespace CAPLab
 {

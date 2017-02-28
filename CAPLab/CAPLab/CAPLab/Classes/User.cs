@@ -4,6 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+/*
+* File name: User.cs
+* 
+* @description This class exists contain the primary attributes of the user. 
+*              
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 namespace CAPLab
 {
     public class User

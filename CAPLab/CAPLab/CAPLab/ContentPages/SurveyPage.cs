@@ -5,7 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-//This page is to contain links to external or internal content for survey taking
+/*
+* File name: SurveyPage.cs
+* 
+* @description This class exists to render and control the logic of the Survey page of the primary app. 
+*              This page is to contain links to external or internal content for survey taking
+* 
+* @author Michael Miller
+* @email miller.7594@osu.edu
+* @version 02/27/2017
+* 
+*/
+
 
 namespace CAPLab
 {
