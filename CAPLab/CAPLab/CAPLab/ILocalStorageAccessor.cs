@@ -21,7 +21,7 @@ namespace CAPLab
         void SaveUser(User user);
         User LoadUser();
 
-        void SaveStats();
-        string LoadStats();
+        void SaveStats(Stats stats);
+        Stats LoadStats();
     }
 }
