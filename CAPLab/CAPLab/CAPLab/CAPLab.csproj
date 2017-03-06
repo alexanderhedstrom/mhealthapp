@@ -37,7 +37,7 @@
   <ItemGroup>
     <Compile Include="App.cs" />
     <Compile Include="Classes\Constants.cs" />
-    <Compile Include="Classes\LocalStorageAccessor.cs" />
+    <Compile Include="Classes\Stats.cs" />
     <Compile Include="ContentPages\DietGoalsPage.cs" />
     <Compile Include="ContentPages\EatingStats.cs" />
     <Compile Include="ContentPages\ExerciseGoalsPage.cs" />

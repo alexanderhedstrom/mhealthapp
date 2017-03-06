@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace CAPLab
 {
-    class Constants
+    public class Constants
     {
         public static string ParticipantID = "caplab";
         public static string Password = "caplab";
