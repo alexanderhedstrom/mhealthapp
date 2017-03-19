@@ -1,0 +1,6 @@
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\optimized\
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\CAPLab.iOS.csprojResolveAssemblyReference.cache
+C:\Users\michael\Desktop\VS_Projects\mHealth\CAPLab\CAPLab\CAPLab.iOS\obj\iPhone\Debug\CAPLab.iOS.csproj.CAPLab.iOS.exe.config

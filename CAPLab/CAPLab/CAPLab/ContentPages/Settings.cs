@@ -14,7 +14,7 @@ using Xamarin.Forms;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
@@ -30,11 +30,13 @@ namespace CAPLab
         TextCell exerciseGoalsLink;
         TextCell licenseLink;
 
-        public Settings() //public Settings(User user)
+        User user;
+
+        public Settings(User user)
         {
             Title = "Settings";
             Icon = "settings.png";
-
+            this.user = user;
             //declaring TextCell links to other pages
             initialSetupLink = new TextCell { Text = "Initial setup base page", Detail = "Launches the first-time setup page", TextColor = Color.Black};
             dietGoalsLink = new TextCell { Text = "Diet goals page", Detail = "Launches the diet goals setup page", TextColor = Color.Black };
@@ -62,7 +64,7 @@ namespace CAPLab
                     },
                     new TableSection (" ")
                     {
-                        initialSetupLink,
+                        //initialSetupLink,
                         dietGoalsLink,
                         exerciseGoalsLink
                     },
@@ -87,10 +89,12 @@ namespace CAPLab
             }));
         }
 
+        //TODO pass the App.user class to the classes below and have them render based on the user data
+
         //launches initial setup page
         void initialSetupLinkClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InitialSetupPage()); //Navigation.PushAsync(new InitialSetupPage(App.user))
+            Navigation.PushAsync(new InitialSetupPage(user)); //Navigation.PushAsync(new InitialSetupPage(App.user))
         }
         // launches diet goals page
         void dietGoalsLinkClicked(object sender, EventArgs e)

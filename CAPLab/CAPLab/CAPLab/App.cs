@@ -23,34 +23,21 @@ namespace CAPLab
     public class App : Application
     {
         public static bool loggedIn = false;
-        //public static User user;
-
-        //need to write a way for the loggedIn bool to be able to read the login status from local storage
+        public static User user;
         public App()
-        {
-            //write code here to check local storage to verify if local data exists for the user on the device. 
+        { 
+            var localStorage = DependencyService.Get<ILocalStorageAccessor>();
+            User user = localStorage.LoadUser();
 
-
-
-            //////////////////////////////////////////////////////////////////////////////////////////////////
-
-            //if no data is found then create a new user instance, create local data for user, pass new user object to the next class/page 
-
-
-
-            //////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-            // if data is found then change App.loggedin to true then set variables from local data to user attributes then pass user object to the next class/page 
-
-
-
-            //////////////////////////////////////////////////////////////////////////////////////////////////
+            if (user.osuUsername != null && user.surveyCondition != null)
+            {
+                loggedIn = true;
+            }
 
 
             if (loggedIn)
             {
-                MainPage = new NavigationPage(new HomepageNav())
+                MainPage = new NavigationPage(new HomepageNav(user))
                 {
                     BarBackgroundColor = Color.Red
                 };
@@ -62,6 +49,10 @@ namespace CAPLab
                     BarBackgroundColor = Color.Red
                 };
             }
+
+            // TODO: implement timer that syncs every 15 minutes if loggedIn == true
+            //https://developer.xamarin.com/api/type/System.Threading.Timer/
+            //https://developer.xamarin.com/api/type/System.Timers.Timer/
         }
 
         protected override void OnStart()

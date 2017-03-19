@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Xamarin.Forms;
 using CAPLab;
+using CAPLab.Droid;
 
 [assembly: Dependency(typeof(LocalStorageAccessor))]
 
@@ -18,26 +19,29 @@ using CAPLab;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
-namespace CAPLab
+namespace CAPLab.Droid
 {
     class LocalStorageAccessor : ILocalStorageAccessor
     {
         public void SaveUser(User user)
         {
-            string placeHolderUsername = Constants.ParticipantID;
-            string placeHolderPassword = Constants.Password;
-            //TODO: Configure app to append all attributes of the user class to a String and write to local storage.
+            //string placeHolderUsername = Constants.testUsername;
+            //string placeHolderSurveyCondition = Constants.testSurveyCondition;
 
             var pathToCurrentDirectory = Environment.CurrentDirectory+"\\userProfile.txt";
             var userProfile = new StringBuilder();
 
-            userProfile.AppendLine(user.ParticipantID);
-            userProfile.AppendLine(user.Password);
-
+            userProfile.AppendLine(user.firstName);
+            userProfile.AppendLine(user.lastName);
+            userProfile.AppendLine(user.currentWeight.ToString());
+            userProfile.AppendLine(user.goalWeight.ToString());
+            userProfile.AppendLine(user.deviceType);
+            userProfile.AppendLine(user.osuUsername);
+            userProfile.AppendLine(user.surveyCondition);
 
             var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
             var sw = new StreamWriter(fs);
@@ -48,13 +52,18 @@ namespace CAPLab
 
         public User LoadUser()
         {
-            //TODO: Configure app to search local directory for the user class, parse it and assign values to a user clas.
             User user = new User();
             var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userProfile.txt";
             var fs = new FileStream(pathToCurrentDirectory, FileMode.Open);
             var sr = new StreamReader(fs);
-            user.ParticipantID = sr.ReadLine();
-            user.Password = sr.ReadLine();
+
+            user.firstName = sr.ReadLine();
+            user.lastName = sr.ReadLine();
+            user.currentWeight = Int32.Parse(sr.ReadLine());
+            user.goalWeight = Int32.Parse(sr.ReadLine());
+            user.deviceType = sr.ReadLine();
+            user.osuUsername = sr.ReadLine();
+            user.surveyCondition = sr.ReadLine();
 
             return user;
         }

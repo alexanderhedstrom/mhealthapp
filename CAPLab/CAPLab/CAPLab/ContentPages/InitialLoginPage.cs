@@ -13,7 +13,7 @@ using Xamarin.Forms;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
@@ -22,7 +22,8 @@ namespace CAPLab
 {
     class InitialLoginPage : ContentPage
     {
-        Entry participantID, participantPass;
+        Entry osuUsernameField;
+        Entry surveyConditionField;
         Label loginStatusMessage;
 
         public InitialLoginPage()
@@ -36,16 +37,16 @@ namespace CAPLab
                 HorizontalTextAlignment = TextAlignment.Center,
                 FontAttributes = FontAttributes.Bold
             };
-            participantID = new Entry
+            osuUsernameField = new Entry
             {
-                Placeholder = "Enter your participant ID here",
+                Placeholder = "Enter your OSU name.#",
                 Keyboard = Keyboard.Plain
             };
 
-            participantPass = new Entry
+            surveyConditionField = new Entry
             {
-                Placeholder = "Enter your password here",
-                IsPassword = true
+                Placeholder = "Enter your survey condition here",
+                Keyboard = Keyboard.Numeric
             };
 
             var loginButton = new Button
@@ -53,10 +54,16 @@ namespace CAPLab
                 Text = "Login"
             };
 
+            var registerButton = new Button
+            {
+                Text = "First time logging in?"
+            };
+
             var logo = new Image { WidthRequest = 80, HeightRequest = 80 };
             logo.Source = ImageSource.FromFile("osuLoginIcon.png");
 
             loginButton.Clicked += OnLoginButtonClicked;
+            registerButton.Clicked += onRegisterButtonClicked;
 
             Content = new StackLayout
             {
@@ -66,9 +73,10 @@ namespace CAPLab
                 {
                     title,
                     logo,
-                    participantID,
-                    participantPass,
+                    osuUsernameField,
+                    surveyConditionField,
                     loginButton,
+                    registerButton,
                     loginStatusMessage
                 }
             };
@@ -78,8 +86,8 @@ namespace CAPLab
         {
             var user = new User
             {
-                ParticipantID = participantID.Text.ToLower(),
-                Password = participantPass.Text,
+                osuUsername = osuUsernameField.Text.ToLower(),
+                surveyCondition = surveyConditionField.Text,
             };
 
             var userIsValid = areCredentialsCorrect(user);
@@ -87,16 +95,21 @@ namespace CAPLab
             {
                 App.loggedIn = true;
                 //The line below creates a homepage behind the current one.
-                Navigation.InsertPageBefore(new HomepageNav(), this);
+                Navigation.InsertPageBefore(new HomepageNav(user), this);
                 //The line below removes the current page to reveal the newly created homepage.
                 Navigation.PopAsync();
             }
             else
             {
-                loginStatusMessage.Text = "Login failed";
-                participantPass.Text = string.Empty;
+                loginStatusMessage.Text = "Login failed, check spelling and try again.";
+                surveyConditionField.Text = string.Empty;
             }
 
+        }
+
+        void onRegisterButtonClicked(object sender, EventArgs e)
+        { 
+            Navigation.PushAsync(new RegistrationPage());
         }
 
         protected override bool OnBackButtonPressed()
@@ -111,11 +124,14 @@ namespace CAPLab
 
         bool areCredentialsCorrect(User user)
         {
-            return user.ParticipantID == Constants.ParticipantID && user.Password == Constants.Password;
-            /*This is where the call out to the server will go.
+            return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
+
+            /* TODO This is where the call out to the server will go.
               the call from the server will return true or false based on if the participant exists and has correct credentials
-              For now it just compares the creds in the Constants.cs class. 
+
+              Will also set variables of the user class using the response from the server
              */
+
         }
     }
 }

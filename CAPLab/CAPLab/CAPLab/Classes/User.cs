@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
@@ -20,23 +20,33 @@ namespace CAPLab
 {
     public class User
     {
-        public string ParticipantID { get; set; }
-        public string Password { get; set; }
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        public int currentWeight { get; set; }
+        public int goalWeight { get; set; }
+        public string deviceType { get; set; }
+        public string osuUsername { get; set; }
+        public string surveyCondition { get; set; }
         //need to set more properties for user
 
-        public bool firstTimeLogin = true;
+        //public bool firstTimeLogin = true;
 
         public int steps { get; set; }
+        // TODO: implement goals settings on user class. 
         //public string exerciseGoals { get; set;}
         //public string dietGoals { get; set;}
 
 
-        public User()
-        {
-            ParticipantID = ""; // call out to server for this value
-            Password = "";
-            steps = 0;
+        //TODO set string variables except survey conditon to .ToUpper() when sent to server
 
-        }
+        //public User(string firstName, string lastName, string osuUsername, string surveyCondition)
+        //{
+        //    this.firstName = firstName;
+        //    this.lastName = lastName;
+        //    this.osuUsername = osuUsername; // TODO: call out to server to check if this value already exists
+        //    this.surveyCondition = surveyCondition; // format: "2017-0001-0001-0001" = year-roundofstudy-condition-person
+
+        //}
+
     }
 }

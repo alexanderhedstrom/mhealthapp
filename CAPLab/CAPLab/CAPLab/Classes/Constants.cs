@@ -20,7 +20,10 @@ namespace CAPLab
 {
     public class Constants
     {
-        public static string ParticipantID = "caplab";
-        public static string Password = "caplab";
+        public static string testUsername = "caplab.0000";
+        public static string testSurveyCondition = "0000-0000-0000-0000";
+
+        public static string URL_LOGIN = "https://mhealth.asc.ohio-state.edu/mhealth_api/register.php";
+        public static string URL_REGISTER = "https://mhealth.asc.ohio-state.edu/mhealth_api/register.php";
     }
 }
