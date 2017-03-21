@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 
 /*
@@ -27,6 +26,8 @@ namespace CAPLab
         public App()
         { 
             var localStorage = DependencyService.Get<ILocalStorageAccessor>();
+
+
             User user = localStorage.LoadUser();
 
             if (user.osuUsername != null && user.surveyCondition != null)

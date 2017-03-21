@@ -39,7 +39,8 @@ namespace CAPLab
 
             osuUsernameField = new Entry
             {
-                Placeholder = "OSU name.#"
+                Placeholder = "OSU name.#",
+                Keyboard = Keyboard.Plain
             };
             Label surveyConditionLabel = new Label
             {
@@ -47,7 +48,8 @@ namespace CAPLab
             };
             surveyConditionField = new Entry
             {
-                Placeholder = "2017-0001-0001-0001"
+                Placeholder = "2017-0001-0001-0001",
+                Keyboard = Keyboard.Telephone
             };
 
             var doneButton = new Button
@@ -107,7 +109,7 @@ namespace CAPLab
                 }
                 else if (!surveyConditionValid)
                 {
-                    registrationErrorMesage.Text = "Registration failed. Invalid survey condition format.";
+                    registrationErrorMesage.Text = "Registration failed. Invalid survey condition format. Don't forget the dashes.";
                 }
                 else
                 {

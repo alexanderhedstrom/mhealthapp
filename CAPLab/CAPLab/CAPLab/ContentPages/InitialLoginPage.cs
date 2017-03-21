@@ -46,7 +46,7 @@ namespace CAPLab
             surveyConditionField = new Entry
             {
                 Placeholder = "Enter your survey condition here",
-                Keyboard = Keyboard.Numeric
+                Keyboard = Keyboard.Telephone
             };
 
             var loginButton = new Button

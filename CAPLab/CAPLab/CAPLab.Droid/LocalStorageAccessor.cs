@@ -53,17 +53,21 @@ namespace CAPLab.Droid
         public User LoadUser()
         {
             User user = new User();
-            var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userProfile.txt";
-            var fs = new FileStream(pathToCurrentDirectory, FileMode.Open);
-            var sr = new StreamReader(fs);
+            if (File.Exists("userProfile.txt"))
+            {
+                var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userProfile.txt";
+                var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
+                var sr = new StreamReader(fs);
 
-            user.firstName = sr.ReadLine();
-            user.lastName = sr.ReadLine();
-            user.currentWeight = Int32.Parse(sr.ReadLine());
-            user.goalWeight = Int32.Parse(sr.ReadLine());
-            user.deviceType = sr.ReadLine();
-            user.osuUsername = sr.ReadLine();
-            user.surveyCondition = sr.ReadLine();
+                user.firstName = sr.ReadLine();
+                user.lastName = sr.ReadLine();
+                user.currentWeight = Int32.Parse(sr.ReadLine());
+                user.goalWeight = Int32.Parse(sr.ReadLine());
+                user.deviceType = sr.ReadLine();
+                user.osuUsername = sr.ReadLine();
+                user.surveyCondition = sr.ReadLine();
+            }
+            
 
             return user;
         }
