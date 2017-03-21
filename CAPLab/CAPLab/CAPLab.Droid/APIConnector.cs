@@ -20,8 +20,18 @@ namespace CAPLab.Droid
 {
     class APIConnector : IAPIConnector
     {
+        //Server user login URL
+        public static string URL_Login = "https://mhealth.asc.ohio-state.edu/mhealth_api/login.php";
+        //Server user register URL
+        public static string URL_Register = "https://mhealth.asc.ohio-state.edu/mhealth_api/register.php";
+
+        //TODO: Define URL's for uploading fitness data
+
+
         //TODO write code to consume JSON
         // https://developer.xamarin.com/guides/cross-platform/application_fundamentals/web_services/#rest
+
+        //TODO: implement the SQL DB connection
 
         HttpClient client;
         
@@ -32,6 +42,18 @@ namespace CAPLab.Droid
         public APIConnector()
         {
             
+        }
+        
+        public void registerUser(string firstName, string lastName, string osuUsername, string surveyCondition)
+        {
+            //TODO: implement the POST login 
+
+            //TODO: set this method to be called after the initialSetupPage
+        }
+
+        public void verifyLogin(string osuUsername, string surveyCondition)
+        {
+            //TODO: implement the comparison of login credentials
         }
     }
 }
