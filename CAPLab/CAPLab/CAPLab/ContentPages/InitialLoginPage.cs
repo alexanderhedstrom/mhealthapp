@@ -13,7 +13,7 @@ using Xamarin.Forms;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
@@ -22,8 +22,10 @@ namespace CAPLab
 {
     class InitialLoginPage : ContentPage
     {
-        Entry participantID, participantPass;
+        Entry osuUsernameField;
+        Entry surveyConditionField;
         Label loginStatusMessage;
+        User api_SuppliedUser;
 
         public InitialLoginPage()
         {
@@ -36,16 +38,16 @@ namespace CAPLab
                 HorizontalTextAlignment = TextAlignment.Center,
                 FontAttributes = FontAttributes.Bold
             };
-            participantID = new Entry
+            osuUsernameField = new Entry
             {
-                Placeholder = "Enter your participant ID here",
+                Placeholder = "Enter your OSU name.#",
                 Keyboard = Keyboard.Plain
             };
 
-            participantPass = new Entry
+            surveyConditionField = new Entry
             {
-                Placeholder = "Enter your password here",
-                IsPassword = true
+                Placeholder = "Enter your survey condition here",
+                Keyboard = Keyboard.Telephone
             };
 
             var loginButton = new Button
@@ -53,10 +55,16 @@ namespace CAPLab
                 Text = "Login"
             };
 
+            var registerButton = new Button
+            {
+                Text = "First time logging in?"
+            };
+
             var logo = new Image { WidthRequest = 80, HeightRequest = 80 };
             logo.Source = ImageSource.FromFile("osuLoginIcon.png");
 
             loginButton.Clicked += OnLoginButtonClicked;
+            registerButton.Clicked += OnRegisterButtonClicked;
 
             Content = new StackLayout
             {
@@ -66,9 +74,10 @@ namespace CAPLab
                 {
                     title,
                     logo,
-                    participantID,
-                    participantPass,
+                    osuUsernameField,
+                    surveyConditionField,
                     loginButton,
+                    registerButton,
                     loginStatusMessage
                 }
             };
@@ -76,27 +85,52 @@ namespace CAPLab
 
         void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            var user = new User
+            if (osuUsernameField.Text == null || 
+                osuUsernameField.Text == string.Empty ||
+                surveyConditionField.Text == null ||
+                surveyConditionField.Text == string.Empty)
             {
-                ParticipantID = participantID.Text.ToLower(),
-                Password = participantPass.Text,
-            };
-
-            var userIsValid = areCredentialsCorrect(user);
-            if (userIsValid)
-            {
-                App.loggedIn = true;
-                //The line below creates a homepage behind the current one.
-                Navigation.InsertPageBefore(new HomepageNav(), this);
-                //The line below removes the current page to reveal the newly created homepage.
-                Navigation.PopAsync();
+                loginStatusMessage.Text = "Login fields cannot be empty.";
             }
             else
             {
-                loginStatusMessage.Text = "Login failed";
-                participantPass.Text = string.Empty;
-            }
+                var user = new User
+                {
+                    osuUsername = osuUsernameField.Text.ToLower(),
+                    surveyCondition = surveyConditionField.Text,
+                };
 
+                var userIsValid = AreCredentialsCorrect(user);
+                if (userIsValid)
+                {
+                    App.loggedIn = true;
+                    if (user.osuUsername.Equals("caplab.0000"))
+                    {
+                        //The line below creates a homepage behind the current one.
+                        Navigation.InsertPageBefore(new HomepageNav(user), this);
+                        //The line below removes the current page to reveal the newly created homepage.
+                        Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        //The line below creates a homepage behind the current one.
+                        Navigation.InsertPageBefore(new HomepageNav(api_SuppliedUser), this);
+                        //The line below removes the current page to reveal the newly created homepage.
+                        Navigation.PopAsync();
+                    }
+
+                }
+                else
+                {
+                    loginStatusMessage.Text = "Login failed, check spelling and try again.";
+                    surveyConditionField.Text = string.Empty;
+                }
+            }
+        }
+
+        void OnRegisterButtonClicked(object sender, EventArgs e)
+        { 
+            Navigation.PushAsync(new RegistrationPage());
         }
 
         protected override bool OnBackButtonPressed()
@@ -109,13 +143,26 @@ namespace CAPLab
             return true;
         }
 
-        bool areCredentialsCorrect(User user)
+        bool AreCredentialsCorrect(User user)
         {
-            return user.ParticipantID == Constants.ParticipantID && user.Password == Constants.Password;
-            /*This is where the call out to the server will go.
-              the call from the server will return true or false based on if the participant exists and has correct credentials
-              For now it just compares the creds in the Constants.cs class. 
-             */
+            if (user.osuUsername.Equals("caplab.0000"))
+            {
+                return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
+            }
+            else
+            {
+               var api_Connector = DependencyService.Get<IAPIConnector>();
+               api_SuppliedUser = api_Connector.VerifyLogin(user).Result;
+               if (api_SuppliedUser != null)
+                {
+                    api_SuppliedUser.retrievedFromServer = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }

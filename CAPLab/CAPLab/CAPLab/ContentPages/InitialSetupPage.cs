@@ -14,7 +14,7 @@ using Xamarin.Forms;
 * 
 * @author Michael Miller
 * @email miller.7594@osu.edu
-* @version 02/27/2017
+* @version 03/18/2017
 * 
 */
 
@@ -25,10 +25,12 @@ namespace CAPLab
         Button dietGoalsButton;
         Button exerciseGoalsButton;
         Button doneButton;
+        User user;
 
-        public InitialSetupPage() // public InitialSetupPage(User user)
+        public InitialSetupPage(User user)
         {
-            Label userLabel = new Label { Text =  "Your participant ID is: "+Constants.ParticipantID}; //user.ParticipantID
+            this.user = user;
+            Label userLabel = new Label { Text =  "Hi "+user.firstName+", Your OSU ID is: "+user.osuUsername};
             Label instructionText1 = new Label { Text = "Connect your accounts by selecting each one below: "};
             Label instructionText2 = new Label { Text = "Set your goals!" };
             var fitBitButton = new Button
@@ -85,6 +87,8 @@ namespace CAPLab
             };
         }
 
+        //TODO: use App.user to attach values created by child pages to the primary user. 
+
         // launches diet goals page
         void dietGoalsButtonClicked(object sender, EventArgs e)
         {
@@ -96,9 +100,15 @@ namespace CAPLab
             Navigation.PushAsync(new ExerciseGoalsPage());
         }
 
-        //returns to the previous page
+        //Launches the homepage, passes the user object and removes the current page from view
         void doneButtonClicked(object sender, EventArgs e)
         {
+            var localStorage = DependencyService.Get<ILocalStorageAccessor>();
+            localStorage.SaveUser(user);
+
+            //TODO: send user to server after creation. 
+
+            Navigation.InsertPageBefore(new HomepageNav(user), this);
             Navigation.PopAsync();
         }
     }

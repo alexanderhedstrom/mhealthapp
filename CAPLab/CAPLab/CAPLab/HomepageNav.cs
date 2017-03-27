@@ -23,13 +23,13 @@ namespace CAPLab
 {
     class HomepageNav : TabbedPage
     {
-        public HomepageNav()
+        public HomepageNav(User user)
         {
             //Moves settings page to a button on the toolbar. 
             // the second argument should be the name of an icon image file (PNG)
             ToolbarItems.Add( new ToolbarItem ("Settings", "settings", () =>
                 {
-                    Navigation.PushAsync(new Settings()); //Navigation.PushAsync(new Settings(App.user));
+                    Navigation.PushAsync(new Settings(user));
                 }));
 
             //TODO: Make title bold.
@@ -38,7 +38,7 @@ namespace CAPLab
 
 
             BarBackgroundColor = Color.Red;
-
+            //TODO pass the user class to the classes below and have them render based on the user data
             Children.Add(new HomepageStats());
 
             Children.Add(new EatingStats());
