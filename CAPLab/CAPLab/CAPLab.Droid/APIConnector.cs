@@ -13,6 +13,8 @@ using Xamarin.Forms;
 using CAPLab;
 using CAPLab.Droid;
 using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 [assembly: Dependency(typeof(APIConnector))]
 
@@ -20,18 +22,8 @@ namespace CAPLab.Droid
 {
     class APIConnector : IAPIConnector
     {
-        //Server user login URL
-        public static string URL_Login = "https://mhealth.asc.ohio-state.edu/mhealth_api/login.php";
-        //Server user register URL
-        public static string URL_Register = "https://mhealth.asc.ohio-state.edu/mhealth_api/register.php";
 
         //TODO: Define URL's for uploading fitness data
-
-
-        //TODO write code to consume JSON
-        // https://developer.xamarin.com/guides/cross-platform/application_fundamentals/web_services/#rest
-
-        //TODO: implement the SQL DB connection
 
         HttpClient client;
         
@@ -39,21 +31,57 @@ namespace CAPLab.Droid
         //https://developer.xamarin.com/guides/xamarin-forms/cloud-services/consuming/rest/
         //https://developer.xamarin.com/recipes/android/web_services/consuming_services/call_a_rest_web_service/
         //https://developer.xamarin.com/guides/cross-platform/application_fundamentals/web_services/#rest
-        public APIConnector()
-        {
-            
-        }
-        
-        public void registerUser(string firstName, string lastName, string osuUsername, string surveyCondition)
-        {
-            //TODO: implement the POST login 
 
+        
+        //this is a POST method
+        public async Task<bool> RegisterUser(User user)
+        {
+            //The following are needed for registration: firstName, lastName, osuUsername, surveyCondition
+            client = new HttpClient();
+
+            var json = JsonConvert.SerializeObject(user);
+            var post_content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            HttpResponseMessage api_Response = null;
+
+            api_Response = await client.PostAsync(Constants.URL_REGISTER, post_content);
+
+            bool regStatus = api_Response.IsSuccessStatusCode;
+            return regStatus;
             //TODO: set this method to be called after the initialSetupPage
         }
 
-        public void verifyLogin(string osuUsername, string surveyCondition)
+        //This is a GET method
+        public async Task<User> VerifyLogin(User user)
         {
-            //TODO: implement the comparison of login credentials
+            client = new HttpClient();
+            client.Timeout = new TimeSpan(7000);
+            User api_SuppliedUser = new User();
+
+            var uri = new Uri(Constants.URL_LOGIN);
+            var response = await client.GetAsync(uri);
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonReply = await response.Content.ReadAsStringAsync();
+                api_SuppliedUser = JsonConvert.DeserializeObject<User>(jsonReply);
+                App.loggedIn = true;
+            }
+            return api_SuppliedUser;
+        }
+
+        //This is a PUT method
+        public async Task UpdateUser (User user)
+        {
+            //TODO: implement user update in app and on server. 
+            //Will likely be done via the settings page
+            client = new HttpClient();
+        }
+        //This is a PUT method
+        public async Task UpdateStats (Stats stats)
+        {
+            //TODO: implement stats update in app and on server. 
+            //Will be tied to a timed event on the primary app.
+            client = new HttpClient();
         }
     }
 }

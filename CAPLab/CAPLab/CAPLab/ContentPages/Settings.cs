@@ -94,7 +94,7 @@ namespace CAPLab
         //launches initial setup page
         void initialSetupLinkClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InitialSetupPage(user)); //Navigation.PushAsync(new InitialSetupPage(App.user))
+            Navigation.PushAsync(new InitialSetupPage(user)); 
         }
         // launches diet goals page
         void dietGoalsLinkClicked(object sender, EventArgs e)

@@ -25,6 +25,7 @@ namespace CAPLab
         Entry osuUsernameField;
         Entry surveyConditionField;
         Label loginStatusMessage;
+        User api_SuppliedUser;
 
         public InitialLoginPage()
         {
@@ -63,7 +64,7 @@ namespace CAPLab
             logo.Source = ImageSource.FromFile("osuLoginIcon.png");
 
             loginButton.Clicked += OnLoginButtonClicked;
-            registerButton.Clicked += onRegisterButtonClicked;
+            registerButton.Clicked += OnRegisterButtonClicked;
 
             Content = new StackLayout
             {
@@ -84,30 +85,50 @@ namespace CAPLab
 
         void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            var user = new User
+            if (osuUsernameField.Text == null || 
+                osuUsernameField.Text == string.Empty ||
+                surveyConditionField.Text == null ||
+                surveyConditionField.Text == string.Empty)
             {
-                osuUsername = osuUsernameField.Text.ToLower(),
-                surveyCondition = surveyConditionField.Text,
-            };
-
-            var userIsValid = areCredentialsCorrect(user);
-            if (userIsValid)
-            {
-                App.loggedIn = true;
-                //The line below creates a homepage behind the current one.
-                Navigation.InsertPageBefore(new HomepageNav(user), this);
-                //The line below removes the current page to reveal the newly created homepage.
-                Navigation.PopAsync();
+                loginStatusMessage.Text = "Login fields cannot be empty.";
             }
             else
             {
-                loginStatusMessage.Text = "Login failed, check spelling and try again.";
-                surveyConditionField.Text = string.Empty;
-            }
+                var user = new User
+                {
+                    osuUsername = osuUsernameField.Text.ToLower(),
+                    surveyCondition = surveyConditionField.Text,
+                };
 
+                var userIsValid = AreCredentialsCorrect(user);
+                if (userIsValid)
+                {
+                    App.loggedIn = true;
+                    if (user.osuUsername.Equals("caplab.0000"))
+                    {
+                        //The line below creates a homepage behind the current one.
+                        Navigation.InsertPageBefore(new HomepageNav(user), this);
+                        //The line below removes the current page to reveal the newly created homepage.
+                        Navigation.PopAsync();
+                    }
+                    else
+                    {
+                        //The line below creates a homepage behind the current one.
+                        Navigation.InsertPageBefore(new HomepageNav(api_SuppliedUser), this);
+                        //The line below removes the current page to reveal the newly created homepage.
+                        Navigation.PopAsync();
+                    }
+
+                }
+                else
+                {
+                    loginStatusMessage.Text = "Login failed, check spelling and try again.";
+                    surveyConditionField.Text = string.Empty;
+                }
+            }
         }
 
-        void onRegisterButtonClicked(object sender, EventArgs e)
+        void OnRegisterButtonClicked(object sender, EventArgs e)
         { 
             Navigation.PushAsync(new RegistrationPage());
         }
@@ -122,16 +143,26 @@ namespace CAPLab
             return true;
         }
 
-        bool areCredentialsCorrect(User user)
+        bool AreCredentialsCorrect(User user)
         {
-            return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
-
-            /* TODO This is where the call out to the server will go.
-              the call from the server will return true or false based on if the participant exists and has correct credentials
-
-              Will also set variables of the user class using the response from the server
-             */
-
+            if (user.osuUsername.Equals("caplab.0000"))
+            {
+                return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
+            }
+            else
+            {
+               var api_Connector = DependencyService.Get<IAPIConnector>();
+               api_SuppliedUser = api_Connector.VerifyLogin(user).Result;
+               if (api_SuppliedUser != null)
+                {
+                    api_SuppliedUser.retrievedFromServer = true;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
     }
 }

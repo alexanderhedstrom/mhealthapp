@@ -29,10 +29,9 @@ namespace CAPLab.Droid
     {
         public void SaveUser(User user)
         {
-            //string placeHolderUsername = Constants.testUsername;
-            //string placeHolderSurveyCondition = Constants.testSurveyCondition;
 
-            var pathToCurrentDirectory = Environment.CurrentDirectory+"\\userProfile.txt";
+            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var fileName = Path.Combine(path, "CAPLab/userProfile.txt");
             var userProfile = new StringBuilder();
 
             userProfile.AppendLine(user.firstName);
@@ -43,20 +42,25 @@ namespace CAPLab.Droid
             userProfile.AppendLine(user.osuUsername);
             userProfile.AppendLine(user.surveyCondition);
 
-            var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
+            var fs = new FileStream(fileName, FileMode.Create);
             var sw = new StreamWriter(fs);
             sw.Write(userProfile);
             sw.Flush();
             sw.Close();
+
+            
         }
 
         public User LoadUser()
         {
             User user = new User();
-            if (File.Exists("userProfile.txt"))
+            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var fileName = Path.Combine(path, "CAPLab/userProfile.txt");
+
+            //TODO: fix external storage loading issues. Weird cause no issues saving there. 
+            if (File.Exists(fileName))
             {
-                var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userProfile.txt";
-                var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
+                var fs = new FileStream(path, FileMode.Open);
                 var sr = new StreamReader(fs);
 
                 user.firstName = sr.ReadLine();
@@ -75,12 +79,13 @@ namespace CAPLab.Droid
         public void SaveStats(Stats stats)
         {
             //TODO: Configure app to append all stats of the stats class to a String and write to local storage.
-            var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userStats.txt";
+            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var fileName = Path.Combine(path, "CAPLab/userStats.txt");
             var userStats = new StringBuilder();
 
             userStats.AppendLine(stats.Steps+string.Empty);
 
-            var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
+            var fs = new FileStream(path, FileMode.Create);
             var sw = new StreamWriter(fs);
             sw.Write(userStats);
             sw.Flush();
@@ -91,10 +96,17 @@ namespace CAPLab.Droid
         {
             //TODO: Configure app to search local directory for the stats class, parse it and assign values to a stats class.
             Stats stats = new Stats();
-            var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userStats.txt";
-            var fs = new FileStream(pathToCurrentDirectory, FileMode.Open);
-            var sr = new StreamReader(fs);
-            stats.Steps = Int32.Parse(sr.ReadLine());
+            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
+            var fileName = Path.Combine(path, "CAPLab/userStats.txt");
+
+
+            if (File.Exists(fileName))
+            {
+                var fs = new FileStream(path, FileMode.Open);
+                var sr = new StreamReader(fs);
+                stats.Steps = Int32.Parse(sr.ReadLine());
+            }
+
 
             return stats;
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,24 +21,34 @@ namespace CAPLab
 {
     public class User
     {
+        [JsonProperty("first_name")]
         public string firstName { get; set; }
-        public string lastName { get; set; }
-        public int currentWeight { get; set; }
-        public int goalWeight { get; set; }
-        public string deviceType { get; set; }
-        public string osuUsername { get; set; }
-        public string surveyCondition { get; set; }
-        //need to set more properties for user
 
-        //public bool firstTimeLogin = true;
+        [JsonProperty("last_name")]
+        public string lastName { get; set; }
+
+        [JsonProperty("current_weight")]
+        public int currentWeight { get; set; }
+
+        [JsonProperty("goal_weight")]
+        public int goalWeight { get; set; }
+
+
+        public string deviceType { get; set; }
+
+        [JsonProperty("osuUsername")]
+        public string osuUsername { get; set; }
+
+        [JsonProperty("survey_condition")]
+        public string surveyCondition { get; set; }
+
+        public bool retrievedFromServer { get; set; }
+
 
         public int steps { get; set; }
         // TODO: implement goals settings on user class. 
         //public string exerciseGoals { get; set;}
         //public string dietGoals { get; set;}
-
-
-        //TODO set string variables except survey conditon to .ToUpper() when sent to server
 
         //public User(string firstName, string lastName, string osuUsername, string surveyCondition)
         //{

@@ -76,47 +76,55 @@ namespace CAPLab
 
         void OnDoneButtonClicked (object sender, EventArgs e)
         {
-            bool firstNameValid = firstNameField.Text.Length > 0 && !Regex.IsMatch(firstNameField.Text, @"\d");
-            bool lastNameValid = lastNameField.Text.Length > 0 && !Regex.IsMatch(lastNameField.Text, @"\d");
-            bool osuUsernameValid = osuUsernameField.Text.Length > 0 && Regex.IsMatch(osuUsernameField.Text, @"(\w+[A-Za-z]\.[0-9]\w+)");
-            bool surveyConditionValid = surveyConditionField.Text.Length > 0 && Regex.IsMatch(surveyConditionField.Text, @"(\d{4}\-\d{4}\-\d{4}\-\d{4})");
-            if (firstNameValid && lastNameValid && osuUsernameValid && surveyConditionValid)
+            if (firstNameField.Text != null && lastNameField.Text != null && osuUsernameField.Text != null && surveyConditionField.Text != null)
             {
-                User user = new User
+                bool firstNameValid = firstNameField.Text.Length > 0 && !Regex.IsMatch(firstNameField.Text, @"\d");
+                bool lastNameValid = lastNameField.Text.Length > 0 && !Regex.IsMatch(lastNameField.Text, @"\d");
+                bool osuUsernameValid = osuUsernameField.Text.Length > 0 && Regex.IsMatch(osuUsernameField.Text, @"(\w+[A-Za-z]\.[0-9]\w+)");
+                bool surveyConditionValid = surveyConditionField.Text.Length > 0 && Regex.IsMatch(surveyConditionField.Text, @"(\d{4}\-\d{4}\-\d{4}\-\d{4})");
+                if (firstNameValid && lastNameValid && osuUsernameValid && surveyConditionValid)
                 {
-                    firstName = firstNameField.Text,
-                    lastName = lastNameField.Text,
-                    osuUsername = osuUsernameField.Text,
-                    surveyCondition = surveyConditionField.Text
-                };
+                    User user = new User
+                    {
+                        firstName = firstNameField.Text,
+                        lastName = lastNameField.Text,
+                        osuUsername = osuUsernameField.Text,
+                        surveyCondition = surveyConditionField.Text
+                    };
 
-                Navigation.InsertPageBefore(new InitialSetupPage(user), this);
-                Navigation.PopAsync();
-            }
-            else
-            {
-                if (!firstNameValid)
-                {
-                    registrationErrorMesage.Text = "Registration failed. Invalid first name.";
-                }
-                else if (!lastNameValid)
-                {
-                    registrationErrorMesage.Text = "Registration failed. Invalid last name.";
-                }
-                else if (!osuUsernameValid)
-                {
-                    registrationErrorMesage.Text = "Registration failed. Invalid username format.";
-                }
-                else if (!surveyConditionValid)
-                {
-                    registrationErrorMesage.Text = "Registration failed. Invalid survey condition format. Don't forget the dashes.";
+                    Navigation.InsertPageBefore(new InitialSetupPage(user), this);
+                    Navigation.PopAsync();
                 }
                 else
                 {
-                    registrationErrorMesage.Text = "Registration failed. Unknown reason.";
+                    if (!firstNameValid)
+                    {
+                        registrationErrorMesage.Text = "Registration failed. Invalid first name.";
+                    }
+                    else if (!lastNameValid)
+                    {
+                        registrationErrorMesage.Text = "Registration failed. Invalid last name.";
+                    }
+                    else if (!osuUsernameValid)
+                    {
+                        registrationErrorMesage.Text = "Registration failed. Invalid username format.";
+                    }
+                    else if (!surveyConditionValid)
+                    {
+                        registrationErrorMesage.Text = "Registration failed. Invalid survey condition format. Don't forget the dashes.";
+                    }
+                    else
+                    {
+                        registrationErrorMesage.Text = "Registration failed. Unknown reason.";
+                    }
                 }
+
             }
-            
+            else
+            {
+                registrationErrorMesage.Text = "Registration fields cannot be blank.";
+            }
+
 
         }
     }

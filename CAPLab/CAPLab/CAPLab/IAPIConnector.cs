@@ -8,6 +8,9 @@ namespace CAPLab
 {
     public interface IAPIConnector
     {
-        
+        Task<bool> RegisterUser(User user);
+        Task<User> VerifyLogin(User user);
+        Task UpdateUser(User user);
+        Task UpdateStats(Stats stats);
     }
 }
