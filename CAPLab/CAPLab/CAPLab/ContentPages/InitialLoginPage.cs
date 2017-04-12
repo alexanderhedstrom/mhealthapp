@@ -104,7 +104,7 @@ namespace CAPLab
                 if (userIsValid)
                 {
                     App.loggedIn = true;
-                    if (user.osuUsername.Equals("caplab.0000"))
+                    if (user.osuUsername.Equals("caplab"))
                     {
                         //The line below creates a homepage behind the current one.
                         Navigation.InsertPageBefore(new HomepageNav(user), this);
@@ -145,7 +145,7 @@ namespace CAPLab
 
         bool AreCredentialsCorrect(User user)
         {
-            if (user.osuUsername.Equals("caplab.0000"))
+            if (user.osuUsername.Equals("caplab"))
             {
                 return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
             }

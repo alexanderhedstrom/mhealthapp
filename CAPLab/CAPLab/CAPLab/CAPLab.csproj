@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="IAPIConnector.cs" />
+    <Compile Include="Interfaces\IAPIConnector.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Classes\Constants.cs" />
     <Compile Include="Classes\Stats.cs" />
@@ -46,10 +46,11 @@
     <Compile Include="ContentPages\InitialSetupPage.cs" />
     <Compile Include="ContentPages\LicensePage.cs" />
     <Compile Include="ContentPages\RegistrationPage.cs" />
-    <Compile Include="ICloseApplication.cs" />
-    <Compile Include="ILocalStorageAccessor.cs" />
+    <Compile Include="Interfaces\ICloseApplication.cs" />
+    <Compile Include="Interfaces\ILocalStorageAccessor.cs" />
     <Compile Include="HomepageNav.cs" />
     <Compile Include="ContentPages\HomepageStats.cs" />
+    <Compile Include="Interfaces\IStepCounter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ContentPages\InitialLoginPage.cs" />
     <Compile Include="ContentPages\Settings.cs" />
