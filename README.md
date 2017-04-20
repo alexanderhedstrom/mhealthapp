@@ -19,9 +19,9 @@ Visual Studio Community 2015
 
 ## Project navigation:
 
-CAPLab.Droid - Location of Android specific customizations
-CAPLab.iOS  - Location of IOS Specifc customizations
-CAPLab - Location of the primary platform agnostic logic
+- CAPLab.Droid - Location of Android specific customizations
+- CAPLab.iOS  - Location of IOS Specifc customizations
+- CAPLab - Location of the primary platform agnostic logic
 
 
 ## How to contribute
