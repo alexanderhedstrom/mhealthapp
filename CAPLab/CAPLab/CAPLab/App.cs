@@ -25,12 +25,11 @@ namespace CAPLab
         public static User user;
         public App()
         { 
-            var localStorage = DependencyService.Get<ILocalStorageAccessor>();
 
 
-            User user = localStorage.LoadUser();
+            user = DependencyService.Get<ILocalStorageAccessor>().LoadUser();
 
-            if (user.osuUsername != null && user.surveyCondition != null)
+            if (user.OsuUsername != null && user.SurveyCondition != null)
             {
                 loggedIn = true;
             }
@@ -51,7 +50,7 @@ namespace CAPLab
                 };
             }
 
-            // TODO: implement timer that syncs every 15 minutes if loggedIn == true
+            //TODO: implement timer that syncs every 15 minutes if loggedIn == true
             //https://developer.xamarin.com/api/type/System.Threading.Timer/
             //https://developer.xamarin.com/api/type/System.Timers.Timer/
         }

@@ -22,14 +22,27 @@ namespace CAPLab
     public class DietGoalsPage : ContentPage
     {
         Button doneButton;
+        Slider committmentLevel;
+        EntryCell currentWeight;
+        EntryCell goalWeight;
+        EntryCell weeklyWeightLoss;
 
         public DietGoalsPage()
         {
             Title = "Diet Goals Setup Page";
-            var currentWeight = new EntryCell { Label = "Current Weight:", Keyboard = Keyboard.Numeric };
-            var goalWeight = new EntryCell { Label = "Goal Weight:", Keyboard = Keyboard.Numeric };
-            var weeklyWeightLoss = new EntryCell { Label = "Weekly weight loss:", Keyboard = Keyboard.Numeric };
+            currentWeight = new EntryCell { Label = "Current Weight:",
+                                            Keyboard = Keyboard.Numeric,
+                                            HorizontalTextAlignment = TextAlignment.Center};
+            goalWeight = new EntryCell { Label = "Goal Weight:",
+                                         Keyboard = Keyboard.Numeric,
+                                         HorizontalTextAlignment = TextAlignment.Center};
+            weeklyWeightLoss = new EntryCell { Label = "Weekly weight loss:",
+                                               Keyboard = Keyboard.Numeric,
+                                               HorizontalTextAlignment = TextAlignment.Center};
 
+            currentWeight.PropertyChanged += OnEntryTextChanged;
+            goalWeight.PropertyChanged += OnEntryTextChanged;
+            weeklyWeightLoss.PropertyChanged += OnEntryTextChanged;
 
             doneButton = new Button
             {
@@ -39,7 +52,7 @@ namespace CAPLab
 
 
             var committmentLabel = new Label { Text = "How commited are you to this goal?"};
-            var committmentLevel = new Slider(0,10,5);
+            committmentLevel = new Slider(0,10,5);
 
             var table = new TableView
             {
@@ -55,7 +68,7 @@ namespace CAPLab
 
             };
 
-            doneButton.Clicked += doneButtonClicked; 
+            doneButton.Clicked += DoneButtonClicked; 
 
             Content = new StackLayout
             {
@@ -70,9 +83,28 @@ namespace CAPLab
         }
 
         //returns to the previous page
-        void doneButtonClicked(object sender, EventArgs e)
+        void DoneButtonClicked(object sender, EventArgs e)
         {
+            App.user.CurrentWeight = int.Parse(currentWeight.Text);
+            App.user.GoalWeight = int.Parse(goalWeight.Text);
+            App.user.DietGoalCommittment = (int)committmentLevel.Value;
             Navigation.PopAsync();
+        }
+        //validates input in the weight fields. Limits user to 3 characters and a total less than 600lbs
+        private void OnEntryTextChanged(object sender, EventArgs e)
+        {
+            var entry = (EntryCell)sender;
+            if (string.IsNullOrEmpty(entry.Text))
+                return;
+            if (entry.Text.Length > 3)
+            {
+                string entryText = entry.Text;
+                entry.Text = entryText;
+            }
+            if (int.Parse(entry.Text) > 600 )
+            {
+                entry.Text = "";
+            }
         }
     }
 }

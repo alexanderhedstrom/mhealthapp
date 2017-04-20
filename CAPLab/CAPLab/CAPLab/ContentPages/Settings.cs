@@ -40,7 +40,7 @@ namespace CAPLab
             //declaring TextCell links to other pages
             initialSetupLink = new TextCell { Text = "Initial setup base page", Detail = "Launches the first-time setup page", TextColor = Color.Black};
             dietGoalsLink = new TextCell { Text = "Diet goals page", Detail = "Launches the diet goals setup page", TextColor = Color.Black };
-            exerciseGoalsLink = new TextCell { Text = "Exercise goals page", Detail = "Launches the exercise goals etup page", TextColor = Color.Black };
+            exerciseGoalsLink = new TextCell { Text = "Exercise goals page", Detail = "Launches the exercise goals setup page", TextColor = Color.Black };
             licenseLink = new TextCell { Text = "Our license", TextColor = Color.Black };
 
             //declaring table sections
@@ -54,22 +54,19 @@ namespace CAPLab
                     {
                         new SwitchCell {Text = "Test 1" },
                         new SwitchCell {Text = "Test 2" },
-                        new EntryCell {Label = "Test 3", Text = "1234" }
+                        new EntryCell {Label = "Test 3", Text = "1234" },
+                        new TextCell {Text = "Notifications", TextColor = Color.Black},
+                        new TextCell {Text = "Version", TextColor = Color.Black, Detail = "v1.01" }
                     },
                     new TableSection (" ")
                     {
-                        new SwitchCell {Text = "Test 1" },
-                        new SwitchCell {Text = "Test 2" },
-                        new EntryCell {Label = "Test 3", Text = "1234" }
-                    },
-                    new TableSection (" ")
-                    {
-                        //initialSetupLink,
                         dietGoalsLink,
                         exerciseGoalsLink
                     },
                     new TableSection (" ")
                     {
+                        new TextCell {Text = "Contact Us" , TextColor = Color.Black}, //TODO: set this cell to launch to an email
+                        new TextCell {Text = "Current Login" , Detail = "Username: "+user.OsuUsername +"   Survey Condition:"+user.SurveyCondition ,TextColor = Color.Black}, //TODO: set this cell to launch a seperate page with additonal user details. 
                         licenseLink
                     }
                 },
@@ -85,16 +82,15 @@ namespace CAPLab
             {
                 App.loggedIn = false;
                 Icon = "logoutIcon.png";
+                DependencyService.Get<ILocalStorageAccessor>().Logout();
                 Navigation.PushAsync(new InitialLoginPage());
             }));
         }
 
-        //TODO pass the App.user class to the classes below and have them render based on the user data
-
         //launches initial setup page
         void initialSetupLinkClicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new InitialSetupPage(user)); 
+            Navigation.PushAsync(new InitialSetupPage(App.user)); 
         }
         // launches diet goals page
         void dietGoalsLinkClicked(object sender, EventArgs e)

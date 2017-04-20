@@ -20,17 +20,17 @@ using Xamarin.Forms;
 
 namespace CAPLab
 {
-    class InitialLoginPage : ContentPage
+    public class InitialLoginPage : ContentPage
     {
         Entry osuUsernameField;
         Entry surveyConditionField;
-        Label loginStatusMessage;
+        public static Label loginStatusMessage;
         User api_SuppliedUser;
 
         public InitialLoginPage()
         {
             NavigationPage.SetHasBackButton(this, false);
-            this.loginStatusMessage = new Label { Text = string.Empty };
+            loginStatusMessage = new Label { Text = string.Empty };
             Icon = "logoutIcon.png";
             var title = new Label
             {
@@ -66,6 +66,7 @@ namespace CAPLab
             loginButton.Clicked += OnLoginButtonClicked;
             registerButton.Clicked += OnRegisterButtonClicked;
 
+
             Content = new StackLayout
             {
                 Padding = 30,
@@ -83,6 +84,16 @@ namespace CAPLab
             };
         }
 
+        //public static void DisplayAlertOnPage(string str)
+        //{
+        //    Alert(str);
+        //}
+
+        //private void Alert (string str)
+        //{
+        //    DisplayAlert("ERROR", str, "OK");
+        //}
+
         void OnLoginButtonClicked(object sender, EventArgs e)
         {
             if (osuUsernameField.Text == null || 
@@ -96,20 +107,22 @@ namespace CAPLab
             {
                 var user = new User
                 {
-                    osuUsername = osuUsernameField.Text.ToLower(),
-                    surveyCondition = surveyConditionField.Text,
+                    OsuUsername = "caplab",//osuUsernameField.Text.ToLower(),
+                    SurveyCondition = surveyConditionField.Text,
                 };
 
                 var userIsValid = AreCredentialsCorrect(user);
                 if (userIsValid)
                 {
                     App.loggedIn = true;
-                    if (user.osuUsername.Equals("caplab.0000"))
+                    if (user.OsuUsername.Equals("caplab"))
                     {
                         //The line below creates a homepage behind the current one.
                         Navigation.InsertPageBefore(new HomepageNav(user), this);
                         //The line below removes the current page to reveal the newly created homepage.
                         Navigation.PopAsync();
+                        var localStorage = DependencyService.Get<ILocalStorageAccessor>();
+                        localStorage.SaveUser(user);
                     }
                     else
                     {
@@ -145,17 +158,18 @@ namespace CAPLab
 
         bool AreCredentialsCorrect(User user)
         {
-            if (user.osuUsername.Equals("caplab.0000"))
+            if (user.OsuUsername.Equals("caplab"))
             {
-                return user.osuUsername == Constants.testUsername && user.surveyCondition == Constants.testSurveyCondition;
+                return user.OsuUsername == Constants.testUsername && user.SurveyCondition == Constants.testSurveyCondition;
             }
             else
             {
                var api_Connector = DependencyService.Get<IAPIConnector>();
-               api_SuppliedUser = api_Connector.VerifyLogin(user).Result;
+
+                App.user = api_Connector.VerifyLogin(user).Result;
                if (api_SuppliedUser != null)
                 {
-                    api_SuppliedUser.retrievedFromServer = true;
+                    api_SuppliedUser.RetrievedFromServer = true;
                     return true;
                 }
                 else

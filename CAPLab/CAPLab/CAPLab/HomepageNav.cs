@@ -34,8 +34,6 @@ namespace CAPLab
 
             //TODO: Make title bold.
             Title = "OSU CAPLab";
-            
-
 
             BarBackgroundColor = Color.Red;
             //TODO pass the user class to the classes below and have them render based on the user data
