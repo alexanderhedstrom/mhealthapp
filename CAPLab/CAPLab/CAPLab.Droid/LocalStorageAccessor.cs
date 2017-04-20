@@ -7,6 +7,9 @@ using System.IO;
 using Xamarin.Forms;
 using CAPLab;
 using CAPLab.Droid;
+using Android.Widget;
+using Plugin.Toasts;
+using Android.App;
 
 [assembly: Dependency(typeof(LocalStorageAccessor))]
 
@@ -25,28 +28,34 @@ using CAPLab.Droid;
 
 namespace CAPLab.Droid
 {
-    class LocalStorageAccessor : ILocalStorageAccessor
+    class LocalStorageAccessor : Activity, ILocalStorageAccessor
     {
         public void SaveUser(User user)
         {
+            //var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;  //Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var fileName = "userProfile.txt";
+            var filePath = Path.Combine(path, fileName);
+            //Directory.CreateDirectory(path);
 
-            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-            var fileName = Path.Combine(path, "CAPLab/userProfile.txt");
+            
             var userProfile = new StringBuilder();
 
-            userProfile.AppendLine(user.firstName);
-            userProfile.AppendLine(user.lastName);
-            userProfile.AppendLine(user.currentWeight.ToString());
-            userProfile.AppendLine(user.goalWeight.ToString());
-            userProfile.AppendLine(user.deviceType);
-            userProfile.AppendLine(user.osuUsername);
-            userProfile.AppendLine(user.surveyCondition);
+            userProfile.AppendLine(user.FirstName);
+            userProfile.AppendLine(user.LastName);
+            userProfile.AppendLine(user.CurrentWeight.ToString());
+            userProfile.AppendLine(user.GoalWeight.ToString());
+            userProfile.AppendLine(user.DeviceType);
+            userProfile.AppendLine(user.OsuUsername);
+            userProfile.AppendLine(user.SurveyCondition);
 
-            var fs = new FileStream(fileName, FileMode.Create);
-            var sw = new StreamWriter(fs);
-            sw.Write(userProfile);
-            sw.Flush();
-            sw.Close();
+            System.IO.File.WriteAllText(filePath, userProfile.ToString());
+
+            //var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+            //var sw = new StreamWriter(fs);
+            //sw.Write(userProfile);
+            //sw.Flush();
+            //sw.Close();
 
             
         }
@@ -54,23 +63,35 @@ namespace CAPLab.Droid
         public User LoadUser()
         {
             User user = new User();
-            var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-            var fileName = Path.Combine(path, "CAPLab/userProfile.txt");
+            //var path = global::Android.OS.Environment.ExternalStorageDirectory.AbsolutePath; //Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var fileName = "userProfile.txt";
+            var filePath = Path.Combine(documentsPath, fileName);
+            //Directory.CreateDirectory(path);
+            
 
             //TODO: fix external storage loading issues. Weird cause no issues saving there. 
-            if (File.Exists(fileName))
+            try
             {
-                var fs = new FileStream(path, FileMode.Open);
-                var sr = new StreamReader(fs);
+                if (File.Exists(filePath))
+                {
+                    //var fs = new FileStream(path, FileMode.Open, FileAccess.Read);
+                    var sr = new StreamReader(filePath);
 
-                user.firstName = sr.ReadLine();
-                user.lastName = sr.ReadLine();
-                user.currentWeight = Int32.Parse(sr.ReadLine());
-                user.goalWeight = Int32.Parse(sr.ReadLine());
-                user.deviceType = sr.ReadLine();
-                user.osuUsername = sr.ReadLine();
-                user.surveyCondition = sr.ReadLine();
+                    user.FirstName = sr.ReadLine();
+                    user.LastName = sr.ReadLine();
+                    user.CurrentWeight = Int32.Parse(sr.ReadLine());
+                    user.GoalWeight = Int32.Parse(sr.ReadLine());
+                    user.DeviceType = sr.ReadLine();
+                    user.OsuUsername = sr.ReadLine();
+                    user.SurveyCondition = sr.ReadLine();
+                }
             }
+            catch (Exception e)
+            {
+                //InitialLoginPage.DisplayAlertOnPage("Unable to load user from local storage.");
+            }
+            
             
 
             return user;
@@ -109,6 +130,14 @@ namespace CAPLab.Droid
 
 
             return stats;
+        }
+
+        public void Logout()
+        {
+            var path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            var fileName = "userProfile.txt";
+            var filePath = Path.Combine(path, fileName);
+            System.IO.File.Delete(filePath);
         }
     }
 }

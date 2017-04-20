@@ -30,7 +30,7 @@ namespace CAPLab
         public InitialSetupPage(User user)
         {
             this.user = user;
-            Label userLabel = new Label { Text =  "Hi "+user.firstName+", Your OSU ID is: "+user.osuUsername};
+            Label userLabel = new Label { Text =  "Hi "+user.FirstName+", Your OSU ID is: "+user.OsuUsername};
             Label instructionText1 = new Label { Text = "Connect your accounts by selecting each one below: "};
             Label instructionText2 = new Label { Text = "Set your goals!" };
             var fitBitButton = new Button
@@ -87,7 +87,6 @@ namespace CAPLab
             };
         }
 
-        //TODO: use App.user to attach values created by child pages to the primary user. 
 
         // launches diet goals page
         void dietGoalsButtonClicked(object sender, EventArgs e)
@@ -104,7 +103,7 @@ namespace CAPLab
         void doneButtonClicked(object sender, EventArgs e)
         {
             var localStorage = DependencyService.Get<ILocalStorageAccessor>();
-            localStorage.SaveUser(user);
+            localStorage.SaveUser(App.user);
 
             //TODO: send user to server after creation. 
 

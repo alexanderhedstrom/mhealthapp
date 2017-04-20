@@ -86,10 +86,10 @@ namespace CAPLab
                 {
                     User user = new User
                     {
-                        firstName = firstNameField.Text,
-                        lastName = lastNameField.Text,
-                        osuUsername = osuUsernameField.Text,
-                        surveyCondition = surveyConditionField.Text
+                        FirstName = firstNameField.Text,
+                        LastName = lastNameField.Text,
+                        OsuUsername = osuUsernameField.Text,
+                        SurveyCondition = surveyConditionField.Text
                     };
 
                     Navigation.InsertPageBefore(new InitialSetupPage(user), this);

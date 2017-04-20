@@ -23,5 +23,7 @@ namespace CAPLab
 
         void SaveStats(Stats stats);
         Stats LoadStats();
+
+        void Logout();
     }
 }

@@ -22,42 +22,36 @@ namespace CAPLab
     public class User
     {
         [JsonProperty("first_name")]
-        public string firstName { get; set; }
+        public string FirstName { get; set; }
 
         [JsonProperty("last_name")]
-        public string lastName { get; set; }
+        public string LastName { get; set; }
 
         [JsonProperty("current_weight")]
-        public int currentWeight { get; set; }
+        public int CurrentWeight { get; set; }
 
         [JsonProperty("goal_weight")]
-        public int goalWeight { get; set; }
+        public int GoalWeight { get; set; }
 
 
-        public string deviceType { get; set; }
+        public string DeviceType { get; set; }
 
         [JsonProperty("osuUsername")]
-        public string osuUsername { get; set; }
+        public string OsuUsername { get; set; }
 
+        // format: "2017-0001-0001-0001" = year-roundofstudy-condition-person
         [JsonProperty("survey_condition")]
-        public string surveyCondition { get; set; }
+        public string SurveyCondition { get; set; }
 
-        public bool retrievedFromServer { get; set; }
+        //Set the variable below to 'true' wherever the user is returned from the API once the API has been setup correctly
+        public bool RetrievedFromServer { get; set; }
 
 
-        public int steps { get; set; }
-        // TODO: implement goals settings on user class. 
-        //public string exerciseGoals { get; set;}
-        //public string dietGoals { get; set;}
+        public int Steps { get; set; } 
+        public string ExerciseGoal { get; set;}
+        public int DietGoalCommittment { get; set;}
 
-        //public User(string firstName, string lastName, string osuUsername, string surveyCondition)
-        //{
-        //    this.firstName = firstName;
-        //    this.lastName = lastName;
-        //    this.osuUsername = osuUsername; // TODO: call out to server to check if this value already exists
-        //    this.surveyCondition = surveyCondition; // format: "2017-0001-0001-0001" = year-roundofstudy-condition-person
 
-        //}
 
     }
 }

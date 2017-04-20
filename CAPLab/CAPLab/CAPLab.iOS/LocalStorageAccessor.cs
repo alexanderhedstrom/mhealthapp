@@ -34,13 +34,13 @@ namespace CAPLab.iOS
             var pathToCurrentDirectory = Environment.CurrentDirectory + "\\userProfile.txt";
             var userProfile = new StringBuilder();
 
-            userProfile.AppendLine(user.firstName);
-            userProfile.AppendLine(user.lastName);
-            userProfile.AppendLine(user.currentWeight.ToString());
-            userProfile.AppendLine(user.goalWeight.ToString());
-            userProfile.AppendLine(user.deviceType);
-            userProfile.AppendLine(user.osuUsername);
-            userProfile.AppendLine(user.surveyCondition);
+            userProfile.AppendLine(user.FirstName);
+            userProfile.AppendLine(user.LastName);
+            userProfile.AppendLine(user.CurrentWeight.ToString());
+            userProfile.AppendLine(user.GoalWeight.ToString());
+            userProfile.AppendLine(user.DeviceType);
+            userProfile.AppendLine(user.OsuUsername);
+            userProfile.AppendLine(user.SurveyCondition);
 
             var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
             var sw = new StreamWriter(fs);
@@ -58,13 +58,13 @@ namespace CAPLab.iOS
                 var fs = new FileStream(pathToCurrentDirectory, FileMode.OpenOrCreate);
                 var sr = new StreamReader(fs);
 
-                user.firstName = sr.ReadLine();
-                user.lastName = sr.ReadLine();
-                user.currentWeight = Int32.Parse(sr.ReadLine());
-                user.goalWeight = Int32.Parse(sr.ReadLine());
-                user.deviceType = sr.ReadLine();
-                user.osuUsername = sr.ReadLine();
-                user.surveyCondition = sr.ReadLine();
+                user.FirstName = sr.ReadLine();
+                user.LastName = sr.ReadLine();
+                user.CurrentWeight = Int32.Parse(sr.ReadLine());
+                user.GoalWeight = Int32.Parse(sr.ReadLine());
+                user.DeviceType = sr.ReadLine();
+                user.OsuUsername = sr.ReadLine();
+                user.SurveyCondition = sr.ReadLine();
             }
 
 
