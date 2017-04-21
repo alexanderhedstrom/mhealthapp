@@ -65,7 +65,7 @@ namespace CAPLab
                     },
                     new TableSection (" ")
                     {
-                        new TextCell {Text = "Contact Us" , TextColor = Color.Black}, //TODO: set this cell to launch to an email
+                        new TextCell {Text = "Contact Us" , TextColor = Color.Black}, //TODO: set this cell to launch to an email client
                         new TextCell {Text = "Current Login" , Detail = "Username: "+user.OsuUsername +"   Survey Condition:"+user.SurveyCondition ,TextColor = Color.Black}, //TODO: set this cell to launch a seperate page with additonal user details. 
                         licenseLink
                     }
