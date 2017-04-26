@@ -51,15 +51,17 @@ namespace CAPLab.Droid
             //TODO: set this method to be called after the initialSetupPage
         }
 
-        //This is a GET method
+        //This is a POST method
         public async Task<User> VerifyLogin(User user)
         {
             client = new HttpClient();
-            client.Timeout = new TimeSpan(7000);
+
             User api_SuppliedUser = new User();
 
-            var uri = new Uri(Constants.URL_LOGIN);
-            var response = await client.GetAsync(uri);
+            var data = JsonConvert.SerializeObject(user);
+            var post_content = new StringContent(data, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync(Constants.URL_LOGIN, post_content);
             if (response.IsSuccessStatusCode)
             {
                 var jsonReply = await response.Content.ReadAsStringAsync();

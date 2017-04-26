@@ -36,7 +36,7 @@ namespace CAPLab
 
         public string DeviceType { get; set; }
 
-        [JsonProperty("osuUsername")]
+        [JsonProperty("osu_username")]
         public string OsuUsername { get; set; }
 
         // format: "2017-0001-0001-0001" = year-roundofstudy-condition-person

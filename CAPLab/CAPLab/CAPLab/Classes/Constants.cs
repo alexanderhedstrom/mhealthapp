@@ -23,7 +23,7 @@ namespace CAPLab
         public static string testUsername = "caplab";
         public static string testSurveyCondition = "0000";
 
-        public static string URL_LOGIN = "https://mhealth.asc.ohio-state.edu/mhealth_api/login.php";
-        public static string URL_REGISTER = "https://mhealth.asc.ohio-state.edu/mhealth_api/register.php";
+        public static string URL_LOGIN = "https://mhealth.asc.ohio-state.edu/login.php";
+        public static string URL_REGISTER = "https://mhealth.asc.ohio-state.edu/register.php";
     }
 }
