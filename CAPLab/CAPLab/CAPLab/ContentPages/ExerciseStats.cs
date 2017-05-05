@@ -99,8 +99,8 @@ namespace CAPLab
 
         void OnRefreshButtonClicked(object sender, EventArgs e)
         {
-            var stepCounter = DependencyService.Get<IStepCounter>();
-            steps.Text = stepCounter.getSteps() + "";
+            //var stepCounter = DependencyService.Get<IStepCounter>();
+            //steps.Text = stepCounter.getSteps() + "";
         }
     }
 }
