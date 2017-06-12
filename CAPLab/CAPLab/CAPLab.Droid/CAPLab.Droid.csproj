@@ -139,11 +139,10 @@
     <Compile Include="APIConnector.cs" />
     <Compile Include="CloseApplication.cs" />
     <Compile Include="LocalStorageAccessor.cs" />
+    <Compile Include="Location.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StepCounter\BootReceiver.cs" />
-    <Compile Include="StepCounter\StepService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -157,7 +156,9 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Properties\AndroidManifest.xml">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Tabbar.axml" />
