@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -96,6 +97,9 @@ namespace CAPLab
 
         void OnLoginButtonClicked(object sender, EventArgs e)
         {
+            //bool osuUsernameValid = osuUsernameField.Text.Length > 0 ?  : false;
+            //bool surveyConditionValid = surveyConditionField.Text.Length > 0 ?  : false;
+
             if (osuUsernameField.Text == null || 
                 osuUsernameField.Text == string.Empty ||
                 surveyConditionField.Text == null ||
@@ -103,11 +107,15 @@ namespace CAPLab
             {
                 loginStatusMessage.Text = "Login fields cannot be empty.";
             }
+            else if (!Regex.IsMatch(osuUsernameField.Text, @"(\w+[A-Za-z]\.[0-9]\w+)") || !Regex.IsMatch(surveyConditionField.Text, @"(\d{4}\-\d{4}\-\d{4}\-\d{4})"))
+            {
+                loginStatusMessage.Text = "Login not attempted. Invalid format for username or survey condition.";
+            }
             else
             {
                 var user = new User
                 {
-                    OsuUsername = "caplab",//osuUsernameField.Text.ToLower(),
+                    OsuUsername = osuUsernameField.Text.ToLower(), //"caplab"
                     SurveyCondition = surveyConditionField.Text,
                 };
 
@@ -115,7 +123,7 @@ namespace CAPLab
                 if (userIsValid)
                 {
                     App.loggedIn = true;
-                    if (user.OsuUsername.Equals("caplab"))
+                    if (user.OsuUsername.Equals(Constants.testUsername))
                     {
                         //The line below creates a homepage behind the current one.
                         Navigation.InsertPageBefore(new HomepageNav(user), this);
@@ -158,7 +166,7 @@ namespace CAPLab
 
         bool AreCredentialsCorrect(User user)
         {
-            if (user.OsuUsername.Equals("caplab"))
+            if (user.OsuUsername.Equals(Constants.testUsername))
             {
                 return user.OsuUsername == Constants.testUsername && user.SurveyCondition == Constants.testSurveyCondition;
             }
