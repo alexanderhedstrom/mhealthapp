@@ -31,11 +31,8 @@ namespace CAPLab
             };
 
             //placeholder boxes
-            Label box1Label = new Label { Text = "Your steps here:" };
-            BoxView box1 = new BoxView
-            {
-                Color = Color.Gray
-            };
+            Button stepButton = new Button { Text = "Your steps here:" };
+      
             Label box2Label = new Label { Text = "Your Exercise goal progress here:" };
             BoxView box2 = new BoxView
             {
@@ -46,19 +43,38 @@ namespace CAPLab
             {
                 Color = Color.Gray
             };
+            Button weightButton = new Button { Text = "Your weight progress here: " };
+            Button locationButton = new Button { Text = "Your location here: " };
+            weightButton.Clicked += weightButton_Clicked;
+            stepButton.Clicked += stepButton_Clicked;
+            locationButton.Clicked += locationButton_Clicked;
             Content = new StackLayout
             {
                 Children =
                 {
                     placeholderText,
-                    box1Label,
-                    box1,
+                    stepButton,
                     box2Label,
                     box2,
                     box3Label,
-                    box3
+                    box3,
+                    weightButton,
+                    locationButton
                 }
             };
+        }
+        void weightButton_Clicked (Object sender, EventArgs e) 
+        {
+            Navigation.PushAsync(new WeightPage());
+        }
+
+        void stepButton_Clicked (Object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new StepPage());
+        }
+        void locationButton_Clicked(Object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new GPSPage());
         }
     }
 }

@@ -1,0 +1,1442 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Syncfusion.SfGauge.XForms</name>
+    </assembly>
+    <members>
+        <member name="T:Syncfusion.SfGauge.XForms.Header">
+            <summary>
+            Header Class represents the properties of Header.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.Header.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.Header"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Header.TextProperty">
+            <summary>
+            Gets or sets the <c>Text</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Header.Text">
+            <summary>
+            The <c>Text</c> Property is used to set the text for Header in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.String"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Header.TextSizeProperty">
+            <summary>
+            Gets or sets the <c>TextSize</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Header.TextSize">
+            <summary>
+            The <c>TextSize</c> Property is used to set the text size of Header in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Header.FontProperty">
+            <summary>
+            Gets or sets the <c>Font</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Header.Font">
+            <summary>
+            The <c>Font</c> Property is used to set the font style of the Header in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfGauge.XForms.Header.Font"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Header.PositionProperty">
+            <summary>
+            Gets or sets the <c>Position</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Header.Position">
+            <summary>
+            The <c>Position</c> Property is used to set the position of the Header in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.Point"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Header.ForegroundColorProperty">
+            <summary>
+            Gets or sets the <c>ForegroundColor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Header.ForegroundColor">
+            <summary>
+            The <c>ForegroundColor</c> Property is used to set the fore ground color of the Header in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.Color"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.NeedlePointer">
+            <summary>
+            Needle pointer class is used to configure the properties of NeedlePointer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.NeedlePointer.KnobRadiusProperty">
+            <summary>
+            Gets or sets the <c>KnobRadius</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.NeedlePointer.KnobRadius">
+            <summary>
+            The <c>KnobRadius</c> Property is used to set the knob radius of the needle pointer in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.NeedlePointer.KnobColorProperty">
+            <summary>
+            Gets or sets the <c>KnobColor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.NeedlePointer.KnobColor">
+            <summary>
+            The <c>KnobColor</c> Property is used to set the KnobColor of the needle pointer in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.NeedlePointer.LengthFactorProperty">
+            <summary>
+            Gets or sets the <c>LengthFactor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.NeedlePointer.LengthFactor">
+            <summary>
+            The <c>LengthFactor</c> Property is used to set the length factor in the needle pointer of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.NeedlePointer.TypeProperty">
+            <summary>
+            Gets or sets the <c>Type</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.NeedlePointer.Type">
+            <summary>
+            The <c>Type</c> Property is used to choose type of the needlepointer in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Syncfusion.SfGauge.XForms.PointerType"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.Pointer">
+            <summary>
+            Pointer class is used to configure the properties of Pointer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.Pointer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.Pointer"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Pointer.ValueProperty">
+            <summary>
+            Gets or sets the <c>Value</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Pointer.Value">
+            <summary>
+            The <c>Value</c> Property is used to set the pointer value of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Pointer.ThicknessProperty">
+            <summary>
+            Gets or sets the <c>Thickness</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Pointer.Thickness">
+            <summary>
+            The <c>Thickness</c> Property is used to set the pointer thickness in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Pointer.ColorProperty">
+            <summary>
+            Gets or sets the <c>Color</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Pointer.Color">
+            <summary>
+            The <c>Color</c> Property is used to set the pointer color in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfGauge.XForms.Pointer.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Pointer.EnableAnimationProperty">
+            <summary>
+            Gets or sets the <c>EnableAnimation</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Pointer.EnableAnimation">
+            <summary>
+            The <c>EnableAnimation</c> Property is used to  enable or disbale the Animation in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.RangePointer">
+            <summary>
+            RangePointer class is used to configure the properties of RangePointer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.RangePointer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.RangePointer"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.RangePointer.OffsetProperty">
+            <summary>
+            Gets or sets the <c>Offset</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.RangePointer.Offset">
+            <summary>
+            The <c>Value</c> Property is used to set the pointer Offset of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Single"/> Offset.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.RangePointer.RangeStartProperty">
+            <summary>
+            Gets or sets the <c>RangeStart</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.RangePointer.RangeStart">
+            <summary>
+            The <c>Value</c> Property is used to set the RangeStart of Rangepointer of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> RangeStart.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.Range">
+            <summary>
+            Range class is used to configure the properties of Range.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.Range.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.Range"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.ColorProperty">
+            <summary>
+            Gets or sets the <c>Color</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.Color">
+            <summary>
+            The <c>Color</c> Property is used to set the Range Color of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfGauge.XForms.Range.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.StartValueProperty">
+            <summary>
+            Gets or sets the <c>StartValue</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.StartValue">
+            <summary>
+            The <c>StartValue</c> Property is used to set the Range startvalue of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.EndValueProperty">
+            <summary>
+            Gets or sets the <c>EndValue</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.EndValue">
+            <summary>
+            The <c>EndValue</c> Property is used to set the Range EndValue of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.ThicknessProperty">
+            <summary>
+            Gets or sets the <c>Thickness</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.Thickness">
+            <summary>
+            The <c>Thickness</c> Property is used to set the Tickness of the range in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.OffsetProperty">
+            <summary>
+            Gets or sets the <c>Offset</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.Offset">
+            <summary>
+            The <c>Offset</c> Property is used to set the offset value of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.StartWidthProperty">
+            <summary>
+            Gets or sets the <c>StartWidth</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.StartWidth">
+            <summary>
+            The <c>StartWidth</c> Property is used to set the startwidth of the range in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Range.EndWidthProperty">
+            <summary>
+            Gets or sets the <c>EndWidth</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Range.EndWidth">
+            <summary>
+            The <c>EndWidth</c> Property is used to set the endwidth of the range in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.Scale">
+            <summary>
+            Scale class is used to configure the properties of Scale.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.Scale.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.Scale"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.RangesProperty">
+            <summary>
+            Gets or sets the <c>Ranges</c> property.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.SfGauge.XForms.Scale.Ranges" -->
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.PointersProperty">
+            <summary>
+            Gets or sets the <c>Pointers</c> property.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.SfGauge.XForms.Scale.Pointers" -->
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.StartValueProperty">
+            <summary>
+            Gets or sets the <c>StartValue</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.StartValue">
+            <summary>
+            The <c>StartValue</c> Property is used to set the start value for the scale in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.EndValueProperty">
+            <summary>
+            Gets or sets the <c>EndValue</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.EndValue">
+            <summary>
+            The <c>EndValue</c> Property is used to set the end value for the scale in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.StartAngleProperty">
+            <summary>
+            Gets or sets the <c>StartAngle</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.StartAngle">
+            <summary>
+            The <c>StartAngle</c> Property is used to set the start angle of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.SweepAngleProperty">
+            <summary>
+            Gets or sets the <c>SweepAngle</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.SweepAngle">
+            <summary>
+            The <c>SweepAngle</c> Property is used to set the sweep angle of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.IntervalProperty">
+            <summary>
+            Gets or sets the <c>Interval</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.Interval">
+            <summary>
+            The <c>Interval</c> Property is used to set the interval between the ticks in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.LabelPrefixProperty">
+            <summary>
+            Gets or sets the <c>LabelPrefix</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelPrefix">
+            <summary>
+            The <c>LabelPrefix</c> Property is used to set the affix the label in the scale. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.String"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.LabelPostfixProperty">
+            <summary>
+            Gets or sets the <c>LabelPostfix</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelPostfix">
+            <summary>
+            The <c>LabelPostfix</c> Property is used to set the suffix the label in the scale . This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.String"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.RimColorProperty">
+            <summary>
+            Gets or sets the <c>RimColor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.RimColor">
+            <summary>
+            The <c>RimColor</c> Property is used to set the Rim Color of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.RimThicknessProperty">
+            <summary>
+            Gets or sets the <c>RimThickness</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.RimThickness">
+            <summary>
+            The <c>RimThickness</c> Property is used to set the Rim Thickness of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.LabelFontProperty">
+            <summary>
+            Gets or sets the <c>LabelFont</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelFont">
+            <summary>
+            The <c>LabelFont</c> Property is used to set the label font style of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.String"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.LabelFontSizeProperty">
+            <summary>
+            Gets or sets the <c>LabelFontSize</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelFontSize">
+            <summary>
+            The <c>LabelFontSize</c> Property is used to set the label font size of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.LabelColorProperty">
+            <summary>
+            Gets or sets the <c>LabelColor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelColor">
+            <summary>
+            The <c>LabelColor</c> Property is used to set the label font color of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Xamarin.Forms.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.MinorTicksPerIntervalProperty">
+            <summary>
+            Gets or sets the <c>MinorTicksPerInterval</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.MinorTicksPerInterval">
+            <summary>
+            The <c>MinorTicksPerInterval</c> Property is used to set the interval between the MinorTicks in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.MajorTickSettingsProperty">
+            <summary>
+            Gets or sets the <c>MajorTickSettings</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.MajorTickSettings">
+            <summary>
+            The <c>MajorTickSettings</c> Property is used to configure the MajorTickSettings in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Syncfusion.SfGauge.XForms.TickSettings"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.MinorTickSettingsProperty">
+            <summary>
+            Gets or sets the <c>MinorTickSettings</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.MinorTickSettings">
+            <summary>
+            The <c>MinorTickSettings</c> Property is used to configure the MinorTickSettings in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:Syncfusion.SfGauge.XForms.TickSettings"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.ShowLabelsProperty">
+            <summary>
+            Gets or sets the <c>ShowLabels</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.ShowLabels">
+            <summary>
+            The <c>ShowLabels</c> Property is used to enable or disable the showLabels in the Gauge UI. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.ShowRimProperty">
+            <summary>
+            Gets or sets the <c>ShowRim</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.ShowRim">
+            <summary>
+            The <c>ShowRim</c> Property is used to enable or disable the showLabels in the Gauge UI. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.ShowTicksProperty">
+            <summary>
+            Gets or sets the <c>ShowTicks</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.ShowTicks">
+            <summary>
+            The <c>ShowTicks</c> Property is used to enable or disable the ShowTicks in the Gauge UI. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Boolean"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Scale.RadiusFactorProperty">
+            <summary>
+            Gets or sets the <c>RadiusFactor</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.RadiusFactor">
+            <summary>
+            The <c>RadiusFactor</c> Property is used to set the radius of the knob in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Syncfusion.SfGauge.XForms.Scale.NumberOfDecimalDigitsProperty" -->
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.NumberOfDecimalDigits">
+            <summary>
+            The <c>NumberOfDecimalDigits</c> Property is used to set the Number of decimal digits in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Int32"/> value.</value>
+        </member>
+        <!-- Badly formed XML comment ignored for member "F:Syncfusion.SfGauge.XForms.Scale.LabelOffsetProperty" -->
+        <member name="P:Syncfusion.SfGauge.XForms.Scale.LabelOffset">
+            <summary>
+            The <c>LabelOffset</c> property is used to set the value for label offset in the gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.NamespaceDoc">
+            <summary>
+            SfCircularGauge control is applicable in this namespace.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.SfCircularGauge">
+            <summary>
+            Sf circular gauge.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.SfCircularGauge.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.SfCircularGauge"/> class.
+            </summary>
+        </member>
+        <member name="E:Syncfusion.SfGauge.XForms.SfCircularGauge.PointerPositionChanged">
+            <summary>
+            PointerPositionChanged event is raised on tapping the schedule cells.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.SfGauge.XForms.SfCircularGauge.Scales" -->
+        <member name="F:Syncfusion.SfGauge.XForms.SfCircularGauge.ScalesProperty">
+            <summary>
+            Gets or sets the <c>Scales</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfCircularGauge.GaugeType">
+            <summary>
+            The <c>GaugeType</c>Property is used to choose the type of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfGauge.XForms.SfCircularGauge.GaugeType"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfCircularGauge.GaugeTypeProperty">
+            <summary>
+            Gets or sets the <c>GaugeType</c> property.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Syncfusion.SfGauge.XForms.SfCircularGauge.Headers" -->
+        <member name="F:Syncfusion.SfGauge.XForms.SfCircularGauge.GaugeHeadersProperty">
+            <summary>
+            Gets or sets the <c>Headers</c> property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.PointerPositionChangedArgs">
+            <summary>
+            PointerPositionChangedArgs class represents properties of PointerPositionChanged Event.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.PointerType">
+            <summary>
+            Specifies the pointerTypes
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.PointerType.Bar">
+            <summary>
+            This returns Bar as pointerType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.PointerType.Triangle">
+            <summary>
+            This returns Triangle as pointerType
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.GaugeType">
+            <summary>
+            Specifies the GaugeTypes
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.Default">
+            <summary>
+            This returns Default GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.East">
+            <summary>
+            This returns East GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.West">
+            <summary>
+            This returns West GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.North">
+            <summary>
+            This returns North GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.South">
+            <summary>
+            This returns South GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.NorthEast">
+            <summary>
+            This returns NorthEast GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.NorthWest">
+            <summary>
+            This returns NorthWest GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.SouthEast">
+            <summary>
+            This returns SouthEast GaugeType
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.GaugeType.SouthWest">
+            <summary>
+            This returns SouthWest GaugeType
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.TickSettings">
+            <summary>
+            TickSettings class is used to configure the properties of TickSettings.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.TickSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.TickSettings"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.TickSettings.LengthProperty">
+            <summary>
+            Gets or sets the <c>Length</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.TickSettings.Length">
+            <summary>
+            The <c>Length</c> Property is used to set the Length of the tick in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.TickSettings.ThicknessProperty">
+            <summary>
+            Gets or sets the <c>Thickness</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.TickSettings.Thickness">
+            <summary>
+            The <c>Thickness</c> Property is used to set the Thickness of the tick in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.TickSettings.ColorProperty">
+            <summary>
+            Gets or sets the <c>Color</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.TickSettings.Color">
+            <summary>
+            The <c>Color</c> Property is used to set the color of the tick in the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="P:Syncfusion.SfGauge.XForms.TickSettings.Color"/> value.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.TickSettings.OffsetProperty">
+            <summary>
+            Gets or sets the <c>Offset</c> property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.TickSettings.Offset">
+            <summary>
+            The <c>Offset</c> Property is used to set the offset value of the Gauge. This is a bindable property.
+            </summary>
+            <value>This property takes the <see cref="T:System.Double"/> value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.CharacterType">
+            <summary>
+            The Digital Characters can be drawn in 4 different segments as follows.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.CharacterType.SegmentSeven">
+            <summary>
+            The Digital Characters rather than using the alphabets, these are mainly used to display numbers.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.CharacterType.SegmentFourteen">
+            <summary>
+            These type of characters are used to display both alphabets and numbers.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.CharacterType.SegmentSixteen">
+            <summary>
+            These type of characters are also used to display both alphabets and numbers.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.CharacterType.EightCrossEightDotMatrix">
+            <summary>
+            These type of characters are used to display special characters along with the alphabets and numbers.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.SfDigitalGauge">
+            <summary>
+            Sf digital gauge.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.SfDigitalGauge.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.SfDigitalGauge"/> class.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.SfDigitalGauge.ValueChangedEventHandler">
+            <summary>
+            Represents the method that will handle the SfDigitalGauge.ValueChanged event of a SfDigitalGauge.
+            </summary>
+            <param name="sender">The source of the event.</param>
+            <param name="e">The data for the event.</param>
+        </member>
+        <member name="E:Syncfusion.SfGauge.XForms.SfDigitalGauge.ValueChanged">
+            <summary>
+            Occurs when value changed.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.SfDigitalGauge.RaiseValueChanged(Syncfusion.SfGauge.XForms.ValueChangedEventArgs)">
+            <summary>
+            Raises the value changed.
+            </summary>
+            <param name="args">Arguments.</param>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterType">
+            <summary>
+            to get and set the charactertype
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterTypeProperty">
+            <summary>
+            The character type property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterStrokeColor">
+            <summary>
+            to get and set the character stroke color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterStrokeColorProperty">
+            <summary>
+            The character stroke color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.DisabledSegmentColor">
+            <summary>
+            to get and set the disabled segment color
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.DisabledSegmentColorProperty">
+            <summary>
+            The disabled segment color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterHeight">
+            <summary>
+            to get and set the character height
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterHeightProperty">
+            <summary>
+            The character height property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterWidth">
+            <summary>
+            to get and set the character weight
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterWidthProperty">
+            <summary>
+            The character width property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.SegmentStrokeWidth">
+            <summary>
+            to get and set the segment thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.SegmentStrokeWidthProperty">
+            <summary>
+            The segment stroke width property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterSpacing">
+            <summary>
+            to get and set the character spacing
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.CharacterSpacingProperty">
+            <summary>
+            The character spacing property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.Value">
+            <summary>
+            to get and set the character spacing
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.ValueProperty">
+            <summary>
+            The value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfDigitalGauge.DisabledSegmentAlpha">
+            <summary>
+            to get and set the disabled segment alpha
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfDigitalGauge.DisabledSegmentAlphaProperty">
+            <summary>
+            The disabled segment alpha property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.ValueChangedEventArgs">
+            <summary>
+            Value changed event arguments.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.ValueChangedEventArgs.DigitalGauge">
+            <summary>
+            Gets or sets the digital gauge.
+            </summary>
+            <value>The digital gauge.</value>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.ValueChangedEventArgs.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>The value.</value>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.BarPointer">
+            <summary>
+            Bar pointer.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.Orientation">
+            <summary>
+            It describes the Enumeration for Orientation in two directions.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Orientation.OrientationVertical">
+            <summary>
+            Displays the control vertically when this orientation is set. 
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.Orientation.OrientationHorizontal">
+            <summary>
+            Displays the control horizontally when this orientation is set. 
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.ScalePosition">
+            <summary>
+            It describes the Enumeration for ScalePosition in LinearGauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.ScalePosition.Forward">
+            <summary>
+            It describes the Enumeration for ScalePosition in forward direction.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.ScalePosition.BackWard">
+            <summary>
+            It describes the Enumeration for ScalePosition in backward direction.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.LinearHeader">
+            <summary>
+            Linear header.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.LinearHeader.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.LinearHeader"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearHeader.TextProperty">
+            <summary>
+            The text property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearHeader.Text">
+            <summary>
+            to get and set the header text of the gauge
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearHeader.FontProperty">
+            <summary>
+            The font property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearHeader.Font">
+            <summary>
+            to get and set the header text of the gauge
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearHeader.PositionProperty">
+            <summary>
+            The position property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearHeader.Position">
+            <summary>
+            to get and set the position value of the Header
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearHeader.ForegroundColorProperty">
+            <summary>
+            The foreground color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearHeader.ForegroundColor">
+            <summary>
+            to get and set the Color of the Header
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.LinearPointer">
+            <summary>
+            Linear pointer.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.LinearPointer.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.LinearPointer"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearPointer.ValueProperty">
+            <summary>
+            The value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearPointer.Value">
+            <summary>
+            to get and set the value of the Pointer
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearPointer.ThicknessProperty">
+            <summary>
+            to get and set the thickness of the Pointer
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearPointer.Thickness">
+            <summary>
+            Gets or sets the thickness.
+            </summary>
+            <value>The thickness.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearPointer.ColorProperty">
+            <summary>
+            The color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearPointer.Color">
+            <summary>
+            to get and set the Color for the Pointer
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearPointer.EnableAnimationProperty">
+            <summary>
+            The enable animation property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearPointer.EnableAnimation">
+            <summary>
+            to get and set the Color for the Pointer
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.LinearRange">
+            <summary>
+            Linear range.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.LinearRange.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.LinearRange"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.ColorProperty">
+            <summary>
+            The color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.Color">
+            <summary>
+            to get and set the Color of the Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.StartValueProperty">
+            <summary>
+            The start value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.StartValue">
+            <summary>
+            to get and set the Start value of the Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.EndValueProperty">
+            <summary>
+            The end value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.EndValue">
+            <summary>
+            to get and set the End value of the Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.OffsetProperty">
+            <summary>
+            The offset property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.Offset">
+            <summary>
+            to get and set the Thickness of the Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.StartWidthProperty">
+            <summary>
+            The start width property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.StartWidth">
+            <summary>
+            to get and set the Thickness of the Range
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearRange.EndWidthProperty">
+            <summary>
+            The end width property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearRange.EndWidth">
+            <summary>
+            to get and set the Thickness of the Range
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.LinearScale">
+            <summary>
+            Linear scale.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.LinearScale.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.LinearScale"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.RangesProperty">
+            <summary>
+            The ranges property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.Ranges">
+            <summary>
+            to get and set the Ranges for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.PointersProperty">
+            <summary>
+            The pointers property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.Pointers">
+            <summary>
+            to get and set the Pointers for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.MinimumValueProperty">
+            <summary>
+            The minimum value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.MinimumValue">
+            <summary>
+            to get and set the Start value of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ScalePositionProperty">
+            <summary>
+            The scale position property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ScalePosition">
+            <summary>
+            to get and set the scale position
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.MaximumValueProperty">
+            <summary>
+            The maximum value property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.MaximumValue">
+            <summary>
+            to get and set the End value of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.IntervalProperty">
+            <summary>
+            The interval property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.Interval">
+            <summary>
+            to get and set the Interval value of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelPrefixProperty">
+            <summary>
+            The label prefix property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelPrefix">
+            <summary>
+            to get and set the Label Post fix text for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelPostfixProperty">
+            <summary>
+            The label postfix property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelPostfix">
+            <summary>
+            to get and set the Label Post fix text for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarColorProperty">
+            <summary>
+            The scale bar color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarColor">
+            <summary>
+            to get and set the Color of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarSizeProperty">
+            <summary>
+            The scale bar size property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarSize">
+            <summary>
+            to get and set the scale bar thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelFontSizeProperty">
+            <summary>
+            The label font size property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelFontSize">
+            <summary>
+            to get and set the scale bar thickness
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarLengthProperty">
+            <summary>
+            The scale bar length property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ScaleBarLength">
+            <summary>
+            to get and set the Rim Thickness of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelFontProperty">
+            <summary>
+            The label font property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelFont">
+            <summary>
+            to get and set the LabelColor of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelColorProperty">
+            <summary>
+            The label color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelColor">
+            <summary>
+            to get and set the LabelColor of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.MinorTicksPerIntervalProperty">
+            <summary>
+            The minor ticks per interval property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.MinorTicksPerInterval">
+            <summary>
+            to get and set the Minor Ticks PerInterval of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.MajorTickSettingsProperty">
+            <summary>
+            The major tick settings property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.MajorTickSettings">
+            <summary>
+            to get and set the Ranges for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.MinorTickSettingsProperty">
+            <summary>
+            The minor tick settings property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.MinorTickSettings">
+            <summary>
+            to get and set the Ranges for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ShowLabelsProperty">
+            <summary>
+            The show labels property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ShowLabels">
+            <summary>
+            to get and set whether to display labels
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.ShowRimProperty">
+            <summary>
+            The show rim property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.ShowRim">
+            <summary>
+            to get and set whether to display rim
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.OffsetProperty">
+            <summary>
+            The offset property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.Offset">
+            <summary>
+            to get and set the offset
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.FrameOffsetProperty">
+            <summary>
+            The frame offset property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.FrameOffset">
+            <summary>
+            to get and set the offset
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearScale.LabelOffsetProperty">
+            <summary>
+            The label offset property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearScale.LabelOffset">
+            <summary>
+            to get and set the Label offset
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.LinearTickSettings">
+            <summary>
+            Linear tick settings.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.LinearTickSettings.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.LinearTickSettings"/> class.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearTickSettings.LengthProperty">
+            <summary>
+            The length property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearTickSettings.Length">
+            <summary>
+            to get and set the Major Ticks Height of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearTickSettings.ThicknessProperty">
+            <summary>
+            The thickness property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearTickSettings.Thickness">
+            <summary>
+            to get and set the Major Ticks Thickness of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearTickSettings.OffsetProperty">
+            <summary>
+            The offset property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearTickSettings.Offset">
+            <summary>
+            to get and set the Major Ticks distance of the Scale
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.LinearTickSettings.ColorProperty">
+            <summary>
+            The color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.LinearTickSettings.Color">
+            <summary>
+            to get and set the MajorTick Color of the Scale
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.SfLinearGauge">
+            <summary>
+            Sf linear gauge.
+            </summary>
+        </member>
+        <member name="M:Syncfusion.SfGauge.XForms.SfLinearGauge.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Syncfusion.SfGauge.XForms.SfLinearGauge"/> class.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfLinearGauge.Scales">
+            <summary>
+            to get and set the scales for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfLinearGauge.ScalesProperty">
+            <summary>
+            The scales property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfLinearGauge.Headers">
+            <summary>
+            to get and set the header for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfLinearGauge.GaugeHeadersProperty">
+            <summary>
+            The gauge headers property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfLinearGauge.FrameBackgroundColor">
+            <summary>
+            to get and set the header for the Gauge.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfLinearGauge.FrameBackgroundColorProperty">
+            <summary>
+            The frame background color property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfLinearGauge.Orientation">
+            <summary>
+            Gets or sets the orientation.
+            </summary>
+            <value>The orientation.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfLinearGauge.OrientationProperty">
+            <summary>
+            The orientation property.
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SfLinearGauge.Frame">
+            <summary>
+            Gets or sets the frame.
+            </summary>
+            <value>The frame.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SfLinearGauge.FrameProperty">
+            <summary>
+            The frame property.
+            </summary>
+        </member>
+        <member name="T:Syncfusion.SfGauge.XForms.SymbolPointer">
+            <summary>
+            Symbol pointer.
+            </summary>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SymbolPointer.OffsetProperty">
+            <summary>
+            to get and set the offset of the Pointer
+            </summary>
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SymbolPointer.Offset">
+            <summary>
+            Gets or sets the offset.
+            </summary>
+            <value>The offset.</value>
+        </member>
+        <member name="F:Syncfusion.SfGauge.XForms.SymbolPointer.LengthFactorProperty">
+            <summary>
+            to get and set the length factor of the Pointer
+            </summary> 
+        </member>
+        <member name="P:Syncfusion.SfGauge.XForms.SymbolPointer.LengthFactor">
+            <summary>
+            Gets or sets the length factor.
+            </summary>
+            <value>The length factor.</value>
+        </member>
+    </members>
+</doc>
