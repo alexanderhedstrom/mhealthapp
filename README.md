@@ -29,7 +29,7 @@ Visual Studio Community 2015
 1. Fork it!
 2. Open a terminal/shell. Type: `git clone git@github.com:alexanderhedstrom/mhealthapp.git`
 3. Type: `$ cd mhealthapp`
-4. Add a connection to the repository: `git remote add myfriend git://github.com/myfriend/the_repo`
+4. Add a connection to the repository: `git remote add myfriend git://github.com/alexanderhedstrom/mhealthapp`
 5. Make your changes
 6. Commit your changes: `git commit -am 'your comments about changes here'`
 7. Push your changes: `git push`
